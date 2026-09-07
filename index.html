@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>VIDENEST | Discover. Learn. Stay Ahead.</title>
+
+  <meta name="description"
+        content="VIDENEST brings you useful technology, AI, mobile, lifestyle and how-to information in simple language.">
+
+  <meta name="keywords"
+        content="VIDENEST, AI, technology, mobile, lifestyle, how to, tech news">
+
+  <meta name="author"
+        content="VIDENEST">
+
+  <meta name="robots"
+        content="index, follow">
+
+  <style>
+
+    /* =========================
+       BASIC RESET
+    ========================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f5f7fb;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      background: #101827;
+      color: white;
+      padding: 14px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+
+    /* LOGO */
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: white;
+    }
+
+    .logo-symbol {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+
+      background: linear-gradient(
+        135deg,
+        #2563eb,
+        #22d3ee
+      );
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 26px;
+      font-weight: bold;
+
+      box-shadow:
+        0 4px 18px rgba(34,211,238,0.3);
+    }
+
+    .logo-text {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .logo-text span {
+      color: #22d3ee;
+    }
+
+    .tagline {
+      font-size: 9px;
+      color: #94a3b8;
+      letter-spacing: 1px;
+    }
+
+
+    /* NAVIGATION */
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #22d3ee;
+    }
+
+
+    /* MOBILE MENU BUTTON */
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      background: white;
+      text-align: center;
+      padding: 90px 7%;
+    }
+
+    .hero h1 {
+      font-size: 46px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 span {
+      color: #2563eb;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: #64748b;
+      font-size: 18px;
+    }
+
+    .hero-buttons {
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 26px;
+      border-radius: 9px;
+      font-weight: bold;
+      margin: 5px;
+      transition: 0.3s;
+    }
+
+    .primary-btn {
+      background: #2563eb;
+      color: white;
+    }
+
+    .primary-btn:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+
+    .secondary-btn {
+      background: #e2e8f0;
+      color: #172033;
+    }
+
+    .secondary-btn:hover {
+      background: #cbd5e1;
+    }
+
+
+    /* =========================
+       GENERAL SECTION
+    ========================= */
+
+    section {
+      padding: 65px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .section-description {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 35px;
+      color: #64748b;
+    }
+
+
+    /* =========================
+       CATEGORIES
+    ========================= */
+
+    .categories {
+      display: grid;
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 20px;
+    }
+
+    .category {
+      background: white;
+      padding: 30px 20px;
+      border-radius: 15px;
+      text-align: center;
+
+      box-shadow:
+        0 5px 20px rgba(0,0,0,0.06);
+
+      transition: 0.3s;
+    }
+
+    .category:hover {
+      transform: translateY(-6px);
+    }
+
+    .category-icon {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    .category h3 {
+      margin-bottom: 8px;
+    }
+
+    .category p {
+      color: #64748b;
+      font-size: 14px;
+    }
+
+
+    /* =========================
+       SEARCH
+    ========================= */
+
+    .search-section {
+      background: white;
+    }
+
+    .search-box {
+      max-width: 650px;
+      margin: auto;
+      display: flex;
+    }
+
+    .search-box input {
+      flex: 1;
+      padding: 15px;
+
+      border: 1px solid #cbd5e1;
+      border-radius: 9px 0 0 9px;
+
+      outline: none;
+      font-size: 15px;
+    }
+
+    .search-box button {
+      padding: 15px 22px;
+
+      border: none;
+      background: #2563eb;
+      color: white;
+
+      border-radius: 0 9px 9px 0;
+
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+
+    /* =========================
+       BLOG PLACEHOLDER
+    ========================= */
+
+    .blog-area {
+      text-align: center;
+    }
+
+    .coming-soon {
+      background: white;
+      max-width: 750px;
+      margin: auto;
+
+      padding: 45px 25px;
+
+      border-radius: 16px;
+
+      box-shadow:
+        0 5px 20px rgba(0,0,0,0.06);
+    }
+
+    .coming-soon-icon {
+      font-size: 55px;
+      margin-bottom: 15px;
+    }
+
+    .coming-soon h3 {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+    .coming-soon p {
+      color: #64748b;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about {
+      background: white;
+    }
+
+    .about-content {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about-content p {
+      color: #64748b;
+      margin-bottom: 15px;
+    }
+
+
+    /* =========================
+       WHY VIDENEST
+    ========================= */
+
+    .features {
+      display: grid;
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 20px;
+    }
+
+    .feature {
+      background: white;
+      padding: 30px 20px;
+      text-align: center;
+
+      border-radius: 15px;
+
+      box-shadow:
+        0 5px 20px rgba(0,0,0,0.06);
+    }
+
+    .feature-icon {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .feature p {
+      color: #64748b;
+      font-size: 14px;
+    }
+
+
+    /* =========================
+       NEWSLETTER
+    ========================= */
+
+    .newsletter {
+      background: #101827;
+      color: white;
+      text-align: center;
+    }
+
+    .newsletter h2 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .newsletter p {
+      color: #cbd5e1;
+      margin-bottom: 25px;
+    }
+
+    .newsletter-box {
+      max-width: 550px;
+      margin: auto;
+      display: flex;
+    }
+
+    .newsletter-box input {
+      flex: 1;
+      padding: 14px;
+
+      border: none;
+      outline: none;
+
+      border-radius: 8px 0 0 8px;
+    }
+
+    .newsletter-box button {
+      border: none;
+
+      background: #2563eb;
+      color: white;
+
+      padding: 14px 20px;
+
+      border-radius: 0 8px 8px 0;
+
+      cursor: pointer;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact {
+      background: white;
+    }
+
+    .contact-form {
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+
+      width: 100%;
+
+      padding: 14px;
+      margin-bottom: 15px;
+
+      border: 1px solid #cbd5e1;
+
+      border-radius: 8px;
+
+      outline: none;
+
+      font-size: 15px;
+    }
+
+    .contact-form textarea {
+      height: 140px;
+      resize: vertical;
+    }
+
+    .contact-form button {
+      width: 100%;
+
+      padding: 14px;
+
+      background: #2563eb;
+      color: white;
+
+      border: none;
+      border-radius: 8px;
+
+      font-size: 16px;
+      font-weight: bold;
+
+      cursor: pointer;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #101827;
+      color: white;
+      text-align: center;
+
+      padding: 35px 7%;
+    }
+
+    .footer-logo {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .footer-logo span {
+      color: #22d3ee;
+    }
+
+    footer p {
+      color: #94a3b8;
+      font-size: 14px;
+      margin: 5px;
+    }
+
+    .footer-links {
+      margin: 18px 0;
+    }
+
+    .footer-links a {
+      color: #cbd5e1;
+      margin: 0 10px;
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: #22d3ee;
+    }
+
+
+    /* =========================
+       MOBILE RESPONSIVE
+    ========================= */
+
+    @media (max-width: 800px) {
+
+      header {
+        padding: 12px 5%;
+      }
+
+      .logo-text {
+        font-size: 20px;
+      }
+
+      .tagline {
+        display: none;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      nav {
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        background: #101827;
+
+        flex-direction: column;
+
+        padding: 15px 0;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      nav a {
+        margin: 0;
+        padding: 13px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .hero {
+        padding: 65px 6%;
+      }
+
+      .hero h1 {
+        font-size: 35px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .categories,
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 50px 6%;
+      }
+
+      .section-title {
+        font-size: 27px;
+      }
+
+      .search-box,
+      .newsletter-box {
+        width: 100%;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+  <a href="#home" class="brand">
+
+    <div class="logo-symbol">
+      V
+    </div>
+
+    <div>
+
+      <div class="logo-text">
+        VIDE<span>NEST</span>
+      </div>
+
+      <div class="tagline">
+        DISCOVER • LEARN • STAY AHEAD
+      </div>
+
+    </div>
+
+  </a>
+
+
+  <button
+    class="menu-btn"
+    onclick="toggleMenu()">
+
+    ☰
+
+  </button>
+
+
+  <nav id="mainNav">
+
+    <a href="#home">Home</a>
+
+    <a href="#categories">
+      Categories
+    </a>
+
+    <a href="#about">
+      About
+    </a>
+
+    <a href="#blog">
+      Blog
+    </a>
+
+    <a href="#contact">
+      Contact
+    </a>
+
+  </nav>
+
+</header>
+
+
+
+<!-- =========================
+     HOME
+========================= -->
+
+<section
+  class="hero"
+  id="home">
+
+  <h1>
+    Welcome to
+    <span>VIDENEST</span>
+  </h1>
+
+  <p>
+    Discover the latest in AI, technology,
+    mobile, lifestyle and useful digital guides.
+  </p>
+
+
+  <div class="hero-buttons">
+
+    <a
+      href="#categories"
+      class="btn primary-btn">
+
+      Explore Categories
+
+    </a>
+
+
+    <a
+      href="#about"
+      class="btn secondary-btn">
+
+      About VIDENEST
+
+    </a>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     CATEGORIES
+========================= -->
+
+<section id="categories">
+
+  <h2 class="section-title">
+    Explore Categories
+  </h2>
+
+  <p class="section-description">
+    Explore different topics and discover
+    useful information.
+  </p>
+
+
+  <div class="categories">
+
+
+    <div class="category">
+
+      <div class="category-icon">
+        🤖
+      </div>
+
+      <h3>
+        AI & Technology
+      </h3>
+
+      <p>
+        Artificial intelligence,
+        technology and digital trends.
+      </p>
+
+    </div>
+
+
+    <div class="category">
+
+      <div class="category-icon">
+        📱
+      </div>
+
+      <h3>
+        Mobile
+      </h3>
+
+      <p>
+        Smartphones, apps, tips,
+        tricks and mobile guides.
+      </p>
+
+    </div>
+
+
+    <div class="category">
+
+      <div class="category-icon">
+        🌍
+      </div>
+
+      <h3>
+        Lifestyle
+      </h3>
+
+      <p>
+        Useful ideas, everyday tips
+        and interesting information.
+      </p>
+
+    </div>
+
+
+    <div class="category">
+
+      <div class="category-icon">
+        💡
+      </div>
+
+      <h3>
+        How To
+      </h3>
+
+      <p>
+        Simple step-by-step guides
+        for everyday tasks.
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     SEARCH
+========================= -->
+
+<section class="search-section">
+
+  <h2 class="section-title">
+    Search VIDENEST
+  </h2>
+
+  <p class="section-description">
+    Search for useful information on VIDENEST.
+  </p>
+
+
+  <div class="search-box">
+
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search here...">
+
+
+    <button
+      onclick="searchSite()">
+
+      Search
+
+    </button>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     BLOG PLACEHOLDER
+========================= -->
+
+<section
+  id="blog"
+  class="blog-area">
+
+  <h2 class="section-title">
+    VIDENEST Blog
+  </h2>
+
+  <p class="section-description">
+    Our articles and useful guides will
+    appear here.
+  </p>
+
+
+  <div class="coming-soon">
+
+    <div class="coming-soon-icon">
+      📝
+    </div>
+
+    <h3>
+      Articles Coming Soon
+    </h3>
+
+    <p>
+      We are preparing useful AI, technology,
+      mobile and lifestyle content for VIDENEST.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section
+  id="about"
+  class="about">
+
+  <h2 class="section-title">
+    About VIDENEST
+  </h2>
+
+
+  <div class="about-content">
+
+    <p>
+      VIDENEST is a digital information platform
+      created to make technology and useful
+      information easier to understand.
+    </p>
+
+    <p>
+      Our goal is simple:
+      <strong>Discover. Learn. Stay Ahead.</strong>
+    </p>
+
+    <p>
+      From AI and smartphones to lifestyle
+      and practical how-to guides, VIDENEST
+      aims to bring useful information together
+      in one place.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     WHY VIDENEST
+========================= -->
+
+<section>
+
+  <h2 class="section-title">
+    Why VIDENEST?
+  </h2>
+
+  <p class="section-description">
+    Simple information made for everyday people.
+  </p>
+
+
+  <div class="features">
+
+
+    <div class="feature">
+
+      <div class="feature-icon">
+        🎯
+      </div>
+
+      <h3>
+        Simple
+      </h3>
+
+      <p>
+        We aim to explain difficult topics
+        in easy language.
+      </p>
+
+    </div>
+
+
+    <div class="feature">
+
+      <div class="feature-icon">
+        💻
+      </div>
+
+      <h3>
+        Useful
+      </h3>
+
+      <p>
+        Practical information that can
+        actually help you.
+      </p>
+
+    </div>
+
+
+    <div class="feature">
+
+      <div class="feature-icon">
+        🚀
+      </div>
+
+      <h3>
+        Future Focused
+      </h3>
+
+      <p>
+        Stay updated with technology,
+        AI and digital trends.
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     NEWSLETTER
+========================= -->
+
+<section class="newsletter">
+
+  <h2>
+    Stay Updated
+  </h2>
+
+  <p>
+    Get the latest VIDENEST updates
+    and articles.
+  </p>
+
+
+  <div class="newsletter-box">
+
+    <input
+      type="email"
+      id="emailInput"
+      placeholder="Enter your email">
+
+
+    <button
+      onclick="subscribeUser()">
+
+      Subscribe
+
+    </button>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section
+  id="contact"
+  class="contact">
+
+  <h2 class="section-title">
+    Contact VIDENEST
+  </h2>
+
+  <p class="section-description">
+    Have a suggestion or want to contact us?
+    Send us a message.
+  </p>
+
+
+  <div class="contact-form">
+
+    <input
+      type="text"
+      id="name"
+      placeholder="Your Name">
+
+
+    <input
+      type="email"
+      id="email"
+      placeholder="Your Email">
+
+
+    <textarea
+      id="message"
+      placeholder="Your Message"></textarea>
+
+
+    <button
+      onclick="sendMessage()">
+
+      Send Message
+
+    </button>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  <div class="footer-logo">
+    VIDE<span>NEST</span>
+  </div>
+
+  <p>
+    Discover. Learn. Stay Ahead.
+  </p>
+
+
+  <div class="footer-links">
+
+    <a href="#home">
+      Home
+    </a>
+
+    <a href="#about">
+      About
+    </a>
+
+    <a href="#categories">
+      Categories
+    </a>
+
+    <a href="#contact">
+      Contact
+    </a>
+
+  </div>
+
+
+  <p>
+    © 2026 VIDENEST.
+    All Rights Reserved.
+  </p>
+
+</footer>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+
+/* MOBILE MENU */
+
+function toggleMenu() {
+
+  const nav =
+    document.getElementById("mainNav");
+
+  nav.classList.toggle("active");
+
+}
+
+
+/* CLOSE MOBILE MENU
+   AFTER CLICKING LINK */
+
+document
+  .querySelectorAll("#mainNav a")
+  .forEach(function(link) {
+
+    link.addEventListener(
+      "click",
+      function() {
+
+        document
+          .getElementById("mainNav")
+          .classList.remove("active");
+
+      }
+    );
+
+  });
+
+
+
+/* SEARCH */
+
+function searchSite() {
+
+  const input =
+    document
+      .getElementById("searchInput")
+      .value
+      .toLowerCase()
+      .trim();
+
+
+  if (input === "") {
+
+    alert(
+      "Please type something to search."
+    );
+
+    return;
+
+  }
+
+
+  alert(
+    "Search feature is ready. Articles will appear here when we add the blog content."
+  );
+
+}
+
+
+
+/* NEWSLETTER */
+
+function subscribeUser() {
+
+  const email =
+    document
+      .getElementById("emailInput")
+      .value
+      .trim();
+
+
+  if (email === "") {
+
+    alert(
+      "Please enter your email address."
+    );
+
+    return;
+
+  }
+
+
+  alert(
+    "Thank you for subscribing to VIDENEST!"
+  );
+
+
+  document
+    .getElementById("emailInput")
+    .value = "";
+
+}
+
+
+
+/* CONTACT FORM */
+
+function sendMessage() {
+
+  const name =
+    document
+      .getElementById("name")
+      .value
+      .trim();
+
+
+  const email =
+    document
+      .getElementById("email")
+      .value
+      .trim();
+
+
+  const message =
+    document
+      .getElementById("message")
+      .value
+      .trim();
+
+
+  if (
+    name === "" ||
+    email === "" ||
+    message === ""
+  ) {
+
+    alert(
+      "Please fill all fields."
+    );
+
+    return;
+
+  }
+
+
+  alert(
+    "Thank you, " +
+    name +
+    "! Your message form is ready."
+  );
+
+
+  document
+    .getElementById("name")
+    .value = "";
+
+
+  document
+    .getElementById("email")
+    .value = "";
+
+
+  document
+    .getElementById("message")
+    .value = "";
+
+}
+
+
+</script>
+
+
+</body>
+</html>
