@@ -844,7 +844,25 @@ footer h4{
     flex-direction:column;
     gap:8px;
   }
+.menu-btn{
+    display:block;
+}
 
+#mainNav{
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    top:70px;
+    right:20px;
+    background:#061426;
+    padding:15px;
+    border-radius:12px;
+    z-index:9999;
+}
+
+#mainNav.active{
+    display:flex;
+}
 }
 
 </style>
