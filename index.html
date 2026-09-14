@@ -1855,9 +1855,8 @@ function toggleMenu(){
 
 /* VIDENEST SEARCH FUNCTION */
 
-
 function searchVidenest(){
-alert("Search function working!");
+
     const input = document.getElementById("searchInput");
     const query = input.value.toLowerCase().trim();
 
@@ -1865,7 +1864,7 @@ alert("Search function working!");
         ".blog-card, .featured-main, .category"
     );
 
-    cards.forEach(card => {
+    cards.forEach(function(card){
 
         const text = card.innerText.toLowerCase();
 
@@ -1877,7 +1876,7 @@ alert("Search function working!");
 
     });
 
-      }
+}
 
 </script>
 </body>
