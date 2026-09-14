@@ -1856,24 +1856,20 @@ function toggleMenu(){
 /* VIDENEST SEARCH FUNCTION */
 
 function searchVidenest(){
+function searchVidenest(){
 
     const input = document.getElementById("searchInput");
     const query = input.value.toLowerCase().trim();
 
-    const cards = document.querySelectorAll(".blog-card, .featured-main, .category");
-
-    if(query === ""){
-        cards.forEach(card => {
-            card.style.display = "";
-        });
-        return;
-    }
+    const cards = document.querySelectorAll(
+        ".blog-card, .featured-main, .category"
+    );
 
     cards.forEach(card => {
 
         const text = card.innerText.toLowerCase();
 
-        if(text.includes(query)){
+        if(query === "" || text.includes(query)){
             card.style.display = "";
         }else{
             card.style.display = "none";
@@ -1881,7 +1877,7 @@ function searchVidenest(){
 
     });
 
-}
+      }
 
 </script>
 </body>
