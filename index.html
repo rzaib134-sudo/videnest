@@ -1857,9 +1857,16 @@ function toggleMenu(){
 
 /* VIDENEST SEARCH FUNCTION */
 
+/* VIDENEST SEARCH FUNCTION */
+
 function searchVidenest(){
 
     const input = document.getElementById("searchInput");
+
+    if(!input){
+        return;
+    }
+
     const query = input.value.toLowerCase().trim();
 
     const cards = document.querySelectorAll(
@@ -1871,14 +1878,47 @@ function searchVidenest(){
         const text = card.innerText.toLowerCase();
 
         if(query === "" || text.includes(query)){
+
             card.style.display = "";
+
         }else{
+
             card.style.display = "none";
+
         }
 
     });
 
 }
+
+
+/* SEARCH WITH ENTER KEY */
+
+document.addEventListener("DOMContentLoaded", function(){
+
+    const searchInput =
+        document.getElementById("searchInput");
+
+    if(searchInput){
+
+        searchInput.addEventListener(
+            "keydown",
+            function(event){
+
+                if(event.key === "Enter"){
+
+                    event.preventDefault();
+
+                    searchVidenest();
+
+                }
+
+            }
+        );
+
+    }
+
+});
 
 </script>
 </body>
