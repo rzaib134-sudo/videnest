@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Explore AI, technology, digital trends and useful technology guides on VIDENEST.">
+
+  <meta name="keywords"
+        content="AI, Artificial Intelligence, Technology, Digital Trends, VIDENEST">
+
+  <title>AI & Technology | VIDENEST</title>
+
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:Arial,Helvetica,sans-serif;
+      background:#f5f8fc;
+      color:#172033;
+      line-height:1.6;
+    }
+
+
+    /* HEADER */
+
+    header{
+      background:#081525;
+      padding:18px 6%;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 4px 18px rgba(0,0,0,.15);
+    }
+
+    .nav{
+      max-width:1200px;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:800;
+      color:#fff;
+      text-decoration:none;
+      letter-spacing:1px;
+    }
+
+    .logo span{
+      background:linear-gradient(90deg,#1677ff,#20d4ff);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:25px;
+      align-items:center;
+    }
+
+    .nav-links a{
+      color:#fff;
+      text-decoration:none;
+      font-size:15px;
+      transition:.3s;
+    }
+
+    .nav-links a:hover{
+      color:#20d4ff;
+    }
+
+
+    /* HERO */
+
+    .hero{
+      min-height:390px;
+      padding:80px 6%;
+      display:flex;
+      align-items:center;
+      background:
+      linear-gradient(
+        90deg,
+        rgba(8,21,37,.95),
+        rgba(8,21,37,.65)
+      ),
+      url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80");
+
+      background-size:cover;
+      background-position:center;
+    }
+
+    .hero-content{
+      max-width:1200px;
+      width:100%;
+      margin:auto;
+    }
+
+    .hero-tag{
+      display:inline-block;
+      background:rgba(32,212,255,.15);
+      border:1px solid rgba(32,212,255,.4);
+      color:#20d4ff;
+      padding:7px 15px;
+      border-radius:30px;
+      font-size:13px;
+      margin-bottom:18px;
+    }
+
+    .hero h1{
+      color:#fff;
+      font-size:48px;
+      line-height:1.15;
+      max-width:700px;
+      margin-bottom:18px;
+    }
+
+    .hero p{
+      color:#d9e4f0;
+      max-width:650px;
+      font-size:18px;
+    }
+
+
+    /* MAIN */
+
+    main{
+      max-width:1200px;
+      margin:auto;
+      padding:70px 6%;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:34px;
+      margin-bottom:12px;
+    }
+
+    .section-description{
+      text-align:center;
+      max-width:700px;
+      margin:0 auto 45px;
+      color:#657287;
+    }
+
+
+    /* ARTICLES */
+
+    .articles{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:25px;
+    }
+
+    .article{
+      background:#fff;
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 8px 28px rgba(0,0,0,.08);
+      transition:.3s;
+      cursor:pointer;
+    }
+
+    .article:hover{
+      transform:translateY(-7px);
+      box-shadow:0 15px 35px rgba(0,0,0,.13);
+    }
+
+    .article img{
+      width:100%;
+      height:210px;
+      object-fit:cover;
+      display:block;
+    }
+
+    .article-content{
+      padding:22px;
+    }
+
+    .article-category{
+      color:#168cff;
+      font-size:13px;
+      font-weight:bold;
+      text-transform:uppercase;
+      margin-bottom:8px;
+    }
+
+    .article h3{
+      font-size:21px;
+      margin-bottom:10px;
+      line-height:1.3;
+    }
+
+    .article p{
+      color:#687589;
+      font-size:14px;
+      margin-bottom:15px;
+    }
+
+    .read-more{
+      color:#168cff;
+      font-weight:bold;
+      font-size:14px;
+    }
+
+
+    /* FEATURED */
+
+    .featured{
+      margin-top:70px;
+      background:#081525;
+      border-radius:25px;
+      padding:45px;
+      color:#fff;
+    }
+
+    .featured h2{
+      font-size:30px;
+      margin-bottom:12px;
+    }
+
+    .featured p{
+      color:#c9d5e3;
+      max-width:750px;
+    }
+
+
+    /* NEWSLETTER */
+
+    .newsletter{
+      margin-top:70px;
+      text-align:center;
+      background:#fff;
+      border-radius:22px;
+      padding:45px 25px;
+      box-shadow:0 8px 25px rgba(0,0,0,.07);
+    }
+
+    .newsletter h2{
+      margin-bottom:10px;
+      font-size:28px;
+    }
+
+    .newsletter p{
+      color:#687589;
+      margin-bottom:22px;
+    }
+
+    .newsletter a{
+      display:inline-block;
+      background:#168cff;
+      color:#fff;
+      text-decoration:none;
+      padding:12px 25px;
+      border-radius:30px;
+      font-weight:bold;
+    }
+
+
+    /* FOOTER */
+
+    footer{
+      background:#081525;
+      color:#fff;
+      padding:50px 6% 20px;
+    }
+
+    .footer-grid{
+      max-width:1200px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:2fr 1fr 1fr 1fr;
+      gap:35px;
+    }
+
+    .footer-logo{
+      font-size:25px;
+      font-weight:bold;
+      margin-bottom:12px;
+    }
+
+    .footer-logo span{
+      color:#20d4ff;
+    }
+
+    footer p{
+      color:#aebdce;
+      font-size:14px;
+    }
+
+    footer h3{
+      margin-bottom:14px;
+      font-size:17px;
+    }
+
+    footer a{
+      display:block;
+      color:#aebdce;
+      text-decoration:none;
+      margin-bottom:8px;
+      font-size:14px;
+    }
+
+    footer a:hover{
+      color:#20d4ff;
+    }
+
+    .footer-bottom{
+      max-width:1200px;
+      margin:35px auto 0;
+      padding-top:20px;
+      border-top:1px solid rgba(255,255,255,.12);
+      text-align:center;
+      color:#8fa0b4;
+      font-size:13px;
+    }
+
+
+    /* MOBILE */
+
+    @media(max-width:900px){
+
+      .nav-links{
+        display:none;
+      }
+
+      .hero{
+        min-height:350px;
+        padding:65px 6%;
+      }
+
+      .hero h1{
+        font-size:38px;
+      }
+
+      .articles{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+    }
+
+
+    @media(max-width:600px){
+
+      header{
+        padding:16px 5%;
+      }
+
+      .logo{
+        font-size:24px;
+      }
+
+      .hero{
+        min-height:330px;
+        padding:55px 5%;
+      }
+
+      .hero h1{
+        font-size:32px;
+      }
+
+      .hero p{
+        font-size:15px;
+      }
+
+      main{
+        padding:55px 5%;
+      }
+
+      .section-title{
+        font-size:28px;
+      }
+
+      .articles{
+        grid-template-columns:1fr;
+      }
+
+      .article img{
+        height:220px;
+      }
+
+      .featured{
+        padding:30px 22px;
+      }
+
+      .featured h2{
+        font-size:25px;
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="nav">
+
+      <a href="index.html" class="logo">
+        VIDE<span>NEST</span>
+      </a>
+
+      <nav class="nav-links">
+
+        <a href="index.html">Home</a>
+
+        <a href="index.html#categories">
+          Categories
+        </a>
+
+        <a href="index.html#blog">
+          Blog
+        </a>
+
+        <a href="index.html#about">
+          About
+        </a>
+
+        <a href="index.html#contact">
+          Contact
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <span class="hero-tag">
+        VIDENEST • TECHNOLOGY
+      </span>
+
+      <h1>
+        AI & Technology
+      </h1>
+
+      <p>
+        Explore artificial intelligence,
+        modern technology, digital trends,
+        useful tools and simple technology
+        guides.
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- MAIN -->
+
+  <main>
+
+
+    <h2 class="section-title">
+      Explore AI & Technology
+    </h2>
+
+    <p class="section-description">
+      Discover useful technology articles,
+      AI tools, digital ideas and practical
+      guides designed to help you learn
+      something new.
+    </p>
+
+
+
+    <!-- ARTICLES -->
+
+    <div class="articles">
+
+
+      <article class="article">
+
+        <img
+        src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80"
+        alt="Artificial Intelligence">
+
+        <div class="article-content">
+
+          <div class="article-category">
+            Artificial Intelligence
+          </div>
+
+          <h3>
+            Best Free AI Tools for Mobile
+          </h3>
+
+          <p>
+            Discover useful AI tools that can
+            make everyday tasks easier and
+            more productive.
+          </p>
+
+          <div class="read-more">
+            Read Article →
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <article class="article">
+
+        <img
+        src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=900&q=80"
+        alt="Technology">
+
+        <div class="article-content">
+
+          <div class="article-category">
+            Technology
+          </div>
+
+          <h3>
+            How Technology Is Changing Daily Life
+          </h3>
+
+          <p>
+            Learn how modern technology is
+            changing the way we work,
+            communicate and live.
+          </p>
+
+          <div class="read-more">
+            Read Article →
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <article class="article">
+
+        <img
+        src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=900&q=80"
+        alt="Digital Technology">
+
+        <div class="article-content">
+
+          <div class="article-category">
+            Digital Trends
+          </div>
+
+          <h3>
+            Technology Trends You Should Know
+          </h3>
+
+          <p>
+            Explore important technology
+            trends shaping the digital future.
+          </p>
+
+          <div class="read-more">
+            Read Article →
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <article class="article">
+
+        <img
+        src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&w=900&q=80"
+        alt="Robotics">
+
+        <div class="article-content">
+
+          <div class="article-category">
+            Robotics
+          </div>
+
+          <h3>
+            The Future of Robots and AI
+          </h3>
+
+          <p>
+            A simple look at how robotics
+            and artificial intelligence may
+            shape the future.
+          </p>
+
+          <div class="read-more">
+            Read Article →
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <article class="article">
+
+        <img
+        src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80"
+        alt="Computer Technology">
+
+        <div class="article-content">
+
+          <div class="article-category">
+            Computers
+          </div>
+
+          <h3>
+            Useful Computer Tips for Everyone
+          </h3>
+
+          <p>
+            Simple computer tips and tricks
+            that can save time and improve
+            your daily workflow.
+          </p>
+
+          <div class="read-more">
+            Read Article →
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <article class="article">
+
+        <img
+        src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=900&q=80"
+        alt="Cyber Security">
+
+        <div class="article-content">
+
+          <div class="article-category">
+            Digital Safety
+          </div>
+
+          <h3>
+            Simple Ways to Stay Safe Online
+          </h3>
+
+          <p>
+            Learn basic digital safety habits
+            that can help protect your accounts
+            and personal information.
+          </p>
+
+          <div class="read-more">
+            Read Article →
+          </div>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+
+
+    <!-- FEATURED -->
+
+    <section class="featured">
+
+      <h2>
+        Learn. Explore. Stay Ahead.
+      </h2>
+
+      <p>
+        VIDENEST brings technology and
+        artificial intelligence closer to
+        everyone through simple and useful
+        information.
+      </p>
+
+    </section>
+
+
+
+    <!-- NEWSLETTER -->
+
+    <section class="newsletter">
+
+      <h2>
+        Stay Updated
+      </h2>
+
+      <p>
+        More useful AI and technology
+        articles are coming soon.
+      </p>
+
+      <a href="index.html">
+        Back to VIDENEST
+      </a>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-grid">
+
+
+      <div>
+
+        <div class="footer-logo">
+          VIDE<span>NEST</span>
+        </div>
+
+        <p>
+          Discover. Learn. Stay Ahead.
+        </p>
+
+        <p style="margin-top:10px;">
+          Useful information about
+          technology, AI, lifestyle,
+          education and more.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Explore
+        </h3>
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="index.html#categories">
+          Categories
+        </a>
+
+        <a href="index.html#blog">
+          Blog
+        </a>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          VIDENEST
+        </h3>
+
+        <a href="index.html#about">
+          About
+        </a>
+
+        <a href="index.html#contact">
+          Contact
+        </a>
+
+        <a href="terms.html">
+          Terms & Conditions
+        </a>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Legal
+        </h3>
+
+        <a href="privacy.html">
+          Privacy Policy
+        </a>
+
+        <a href="terms.html">
+          Terms & Conditions
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      © 2026 VIDENEST. All rights reserved.
+
+    </div>
+
+  </footer>
+
+
+</body>
+
+</html>
