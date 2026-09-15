@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Tech | VIDENEST</title>
+
+<meta name="description"
+content="Explore technology guides, gadgets, useful tips and the latest tech insights on VIDENEST.">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial, sans-serif;
+background:#f5f8fc;
+color:#172033;
+line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+background:#081525;
+padding:18px 7%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:white;
+text-decoration:none;
+}
+
+.logo span{
+background:linear-gradient(90deg,#1677ff,#20d4ff);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+nav{
+display:flex;
+gap:22px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-size:15px;
+}
+
+nav a:hover{
+color:#20d4ff;
+}
+
+/* HERO */
+
+.hero{
+padding:80px 7%;
+background:
+linear-gradient(rgba(8,21,37,.82),rgba(8,21,37,.90)),
+url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+background-position:center;
+color:white;
+}
+
+.hero-content{
+max-width:800px;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:18px;
+}
+
+.hero p{
+font-size:19px;
+color:#dbe7f5;
+max-width:700px;
+}
+
+/* CONTAINER */
+
+.container{
+width:86%;
+max-width:1200px;
+margin:auto;
+}
+
+.section-title{
+text-align:center;
+margin:55px 0 30px;
+}
+
+.section-title h2{
+font-size:32px;
+margin-bottom:8px;
+}
+
+.section-title p{
+color:#667085;
+}
+
+/* ARTICLES */
+
+.article-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.article{
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.article:hover{
+transform:translateY(-6px);
+}
+
+.article img{
+width:100%;
+height:210px;
+object-fit:cover;
+}
+
+.article-content{
+padding:22px;
+}
+
+.article-content span{
+color:#168cff;
+font-size:14px;
+font-weight:bold;
+}
+
+.article-content h3{
+font-size:21px;
+margin:8px 0;
+}
+
+.article-content p{
+color:#667085;
+font-size:15px;
+}
+
+/* FEATURE */
+
+.feature{
+margin-top:55px;
+background:#081525;
+color:white;
+padding:45px;
+border-radius:22px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:30px;
+}
+
+.feature-text{
+max-width:700px;
+}
+
+.feature h2{
+font-size:30px;
+margin-bottom:12px;
+}
+
+.feature p{
+color:#dbe7f5;
+}
+
+.feature-btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 22px;
+background:#168cff;
+color:white;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+margin-top:70px;
+background:#081525;
+color:#cbd5e1;
+padding:45px 7% 20px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:2fr 1fr 1fr 1fr;
+gap:30px;
+}
+
+footer h3{
+color:white;
+margin-bottom:12px;
+}
+
+footer a{
+display:block;
+color:#cbd5e1;
+text-decoration:none;
+margin:7px 0;
+}
+
+footer a:hover{
+color:#20d4ff;
+}
+
+.footer-bottom{
+border-top:1px solid rgba(255,255,255,.12);
+margin-top:30px;
+padding-top:18px;
+text-align:center;
+font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+nav{
+display:none;
+}
+
+.hero{
+padding:60px 7%;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+.article-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.footer-grid{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:600px){
+
+.hero h1{
+font-size:32px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.article-grid{
+grid-template-columns:1fr;
+}
+
+.feature{
+padding:30px 22px;
+}
+
+.feature h2{
+font-size:25px;
+}
+
+.footer-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<a href="index.html" class="logo">
+VIDE<span>NEST</span>
+</a>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="index.html#categories">
+Categories
+</a>
+
+<a href="index.html#blog">
+Blog
+</a>
+
+<a href="index.html#about">
+About
+</a>
+
+<a href="index.html#contact">
+Contact
+</a>
+
+</nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Technology</h1>
+
+<p>
+Explore useful technology guides, gadget tips,
+digital tools and simple tech knowledge to make
+your everyday life easier.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ARTICLES -->
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Latest Tech Insights</h2>
+
+<p>
+Simple technology information for everyday users.
+</p>
+
+</div>
+
+
+<div class="article-grid">
+
+
+<div class="article">
+
+<img
+src="https://images.unsplash.com/photo-1517336714739-489689fd1ca8?auto=format&fit=crop&w=800&q=80">
+
+<div class="article-content">
+
+<span>TECH</span>
+
+<h3>
+Best Tech Tools You Should Know
+</h3>
+
+<p>
+Discover useful digital tools and technologies
+that can improve your daily work and productivity.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="article">
+
+<img
+src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80">
+
+<div class="article-content">
+
+<span>GADGETS</span>
+
+<h3>
+Smart Gadgets for Everyday Life
+</h3>
+
+<p>
+Explore interesting gadgets and smart technology
+that can make everyday tasks easier.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="article">
+
+<img
+src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80">
+
+<div class="article-content">
+
+<span>TECH GUIDE</span>
+
+<h3>
+Technology Tips for Beginners
+</h3>
+
+<p>
+Simple technology tips to help beginners
+understand and use digital tools.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="article">
+
+<img
+src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80">
+
+<div class="article-content">
+
+<span>DIGITAL</span>
+
+<h3>
+How Technology Is Changing Our Lives
+</h3>
+
+<p>
+Learn how modern technology is changing
+the way we work, communicate and learn.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="article">
+
+<img
+src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80">
+
+<div class="article-content">
+
+<span>PRODUCTIVITY</span>
+
+<h3>
+Useful Digital Tools for Work
+</h3>
+
+<p>
+Discover tools that can help you stay organized
+and productive.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="article">
+
+<img
+src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?auto=format&fit=crop&w=800&q=80">
+
+<div class="article-content">
+
+<span>INTERNET</span>
+
+<h3>
+Simple Internet Tips Everyone Should Know
+</h3>
+
+<p>
+Useful tips for browsing the internet safely,
+quickly and efficiently.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<!-- FEATURE -->
+
+<section class="feature">
+
+<div class="feature-text">
+
+<h2>
+Technology Made Simple
+</h2>
+
+<p>
+At VIDENEST, we believe technology should be
+easy to understand. Our goal is to explain useful
+technology, gadgets and digital tools in simple language.
+</p>
+
+<a href="index.html" class="feature-btn">
+Back to VIDENEST
+</a>
+
+</div>
+
+</section>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+
+<h3>VIDENEST</h3>
+
+<p>
+Discover. Learn. Stay Ahead.
+Useful technology, AI, mobile,
+lifestyle and educational content.
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Explore</h3>
+
+<a href="index.html">Home</a>
+
+<a href="ai.html">AI</a>
+
+<a href="index.html#categories">
+Categories
+</a>
+
+</div>
+
+
+<div>
+
+<h3>Categories</h3>
+
+<a href="ai.html">AI</a>
+
+<a href="tech.html">Technology</a>
+
+<a href="index.html#categories">
+More
+</a>
+
+</div>
+
+
+<div>
+
+<h3>Important</h3>
+
+<a href="index.html#about">About</a>
+
+<a href="index.html#contact">Contact</a>
+
+<a href="privacy.html">Privacy Policy</a>
+
+<a href="terms.html">Terms & Conditions</a>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+© 2026 VIDENEST. All Rights Reserved.
+
+</div>
+
+</footer>
+
+</body>
+</html>
