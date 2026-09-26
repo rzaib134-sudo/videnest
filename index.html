@@ -4,884 +4,1346 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>VIDENEST | Discover. Learn. Stay Ahead.</title>
 
 <meta name="description"
-      content="VIDENEST brings you useful technology, AI, mobile, lifestyle and how-to information in simple language.">
+content="VIDENEST is your space to learn, explore and grow with technology, AI, lifestyle, history and useful guides.">
 
 <meta name="keywords"
-      content="VIDENEST, AI, technology, mobile, lifestyle, how to, tech news">
+content="VIDENEST, AI, Technology, Mobile, Lifestyle, History, Education">
 
-<meta name="author"
-      content="VIDENEST">
+<meta name="author" content="VIDENEST">
 
-<meta name="robots"
-      content="index, follow">
-
+<meta name="robots" content="index, follow">
 
 <style>
 
-/* =========================
-   BASIC
-========================= */
+/* =====================================================
+   RESET
+===================================================== */
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial,sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-  scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-  background:#f5f7fb;
-  color:#172033;
-  line-height:1.6;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #182333;
 }
 
-a{
-  text-decoration:none;
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
 }
 
 
-/* =========================
+/* =====================================================
    HEADER
-========================= */
+===================================================== */
 
-header{
-  background:#081525;
-  color:white;
-  padding:13px 5%;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  position:sticky;
-  top:0;
-  z-index:1000;
-  box-shadow:0 3px 20px rgba(0,0,0,.15);
+header {
+    height: 64px;
+    background: #071525;
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 4.5%;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
 }
 
 
 /* LOGO */
 
-.brand{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  color:white;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    min-width: 245px;
 }
 
-.logo-symbol{
-  width:46px;
-  height:46px;
-  border-radius:13px;
+.logo-mark {
+    width: 38px;
+    height: 42px;
 
-  background:linear-gradient(
-    135deg,
-    #1677ff,
-    #20d4ff
-  );
+    position: relative;
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  font-size:28px;
-  font-weight:bold;
+    font-size: 27px;
+    font-weight: 900;
 
-  box-shadow:
-  0 5px 20px rgba(0,160,255,.35);
+    color: white;
+
+    background: linear-gradient(
+        145deg,
+        #1678ff,
+        #22d3ee
+    );
+
+    clip-path: polygon(
+        0 0,
+        42% 0,
+        60% 28%,
+        82% 0,
+        100% 0,
+        69% 100%,
+        47% 100%
+    );
 }
 
-.logo-text{
-  font-size:23px;
-  font-weight:bold;
-  letter-spacing:1px;
+.logo-name {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: .3px;
 }
 
-.logo-text span{
-  color:#20d4ff;
+.logo-name span {
+    color: #159eff;
 }
 
-.tagline{
-  color:#9baabd;
-  font-size:9px;
-  letter-spacing:1px;
+.logo-tagline {
+    font-size: 8px;
+    color: #d5dee8;
+    letter-spacing: .5px;
+    margin-top: -1px;
 }
 
 
 /* NAV */
 
-nav{
-  display:flex;
-  align-items:center;
+nav {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 27px;
 }
 
-nav a{
-  color:#e9eef7;
-  margin-left:22px;
-  font-size:14px;
-  font-weight:600;
-  transition:.3s;
+nav a {
+    position: relative;
+
+    color: #e9eef5;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    padding: 24px 0;
 }
 
-nav a:hover{
-  color:#20d4ff;
+nav a:hover,
+nav a.active {
+    color: #159eff;
+}
+
+nav a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 14px;
+
+    height: 2px;
+
+    background: #168cff;
+
+    border-radius: 10px;
 }
 
 
-/* MENU */
+/* HEADER ACTIONS */
 
-.menu-btn{
-  display:none;
-  background:none;
-  border:none;
-  color:white;
-  font-size:30px;
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header-icon {
+    width: 34px;
+    height: 34px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #14243a;
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+.connect {
+    border: none;
+
+    background: #168cff;
+    color: white;
+
+    border-radius: 9px;
+
+    padding: 9px 13px;
+
+    font-size: 10px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.menu-button {
+    display: none;
+
+    border: none;
+    background: transparent;
+
+    color: white;
+
+    font-size: 26px;
+
+    cursor: pointer;
 }
 
 
-/* =========================
+/* =====================================================
    HERO
-========================= */
+===================================================== */
 
-.hero{
-  min-height:470px;
+.hero {
 
-  background:
-  linear-gradient(
-    90deg,
-    rgba(5,20,40,.92),
-    rgba(5,20,40,.48),
-    rgba(5,20,40,.20)
-  ),
-  url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=85");
+    height: 292px;
 
-  background-size:cover;
-  background-position:center;
+    position: relative;
 
-  color:white;
+    color: white;
 
-  display:flex;
-  align-items:center;
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(4,19,36,.91) 0%,
+            rgba(4,19,36,.70) 37%,
+            rgba(4,19,36,.20) 72%,
+            rgba(4,19,36,.08) 100%
+        ),
+        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=90");
 
-  padding:70px 7%;
-}
-
-.hero-content{
-  max-width:650px;
-}
-
-.hero-tag{
-  color:#59d9ff;
-  font-size:13px;
-  font-weight:bold;
-  letter-spacing:3px;
-  margin-bottom:12px;
-}
-
-.hero h1{
-  font-size:52px;
-  line-height:1.12;
-  margin-bottom:20px;
-}
-
-.hero h1 span{
-  color:#1eb7ff;
-}
-
-.hero-description{
-  color:#e1e8f1;
-  font-size:17px;
-  max-width:610px;
-}
-
-.hero-buttons{
-  margin-top:28px;
-}
-
-.btn{
-  display:inline-block;
-  padding:13px 22px;
-  border-radius:9px;
-  font-weight:bold;
-  margin-right:8px;
-  margin-bottom:8px;
-  transition:.3s;
-}
-
-.primary-btn{
-  background:#168cff;
-  color:white;
-}
-
-.primary-btn:hover{
-  transform:translateY(-3px);
-  background:#0877df;
-}
-
-.secondary-btn{
-  border:1px solid rgba(255,255,255,.7);
-  color:white;
-  background:rgba(255,255,255,.08);
-}
-
-.secondary-btn:hover{
-  background:white;
-  color:#172033;
-}
-
-
-/* =========================
-   CATEGORIES
-========================= */
-
-section{
-  padding:65px 7%;
-}
-
-.section-title{
-  text-align:center;
-  font-size:32px;
-  margin-bottom:10px;
-}
-
-.section-description{
-  text-align:center;
-  color:#64748b;
-  max-width:650px;
-  margin:0 auto 35px;
-}
-
-.categories{
-  display:grid;
-  grid-template-columns:repeat(6,1fr);
-  gap:15px;
-}
-
-.category{
-  background:white;
-  padding:25px 12px;
-  border-radius:14px;
-  text-align:center;
-
-  box-shadow:
-  0 5px 20px rgba(0,0,0,.06);
-
-  transition:.3s;
-}
-
-.category:hover{
-  transform:translateY(-6px);
-  box-shadow:
-  0 12px 30px rgba(0,0,0,.10);
-}
-
-.category-icon{
-  font-size:34px;
-  margin-bottom:8px;
-}
-
-.category h3{
-  font-size:16px;
-  margin-bottom:5px;
-}
-
-.category p{
-  color:#64748b;
-  font-size:12px;
-}
-
-
-/* =========================
-   SEARCH
-========================= */
-
-.search-section{
-  background:white;
-  padding:15px 10px;
-}
-
-.search-box{
-  width:90%;
-  max-width:400px;
-  margin:0 auto;
-  display:flex;
-}
-
-.search-box input{
-  width:100%;
-  min-width:0;
-  padding:9px 11px;
-  border:1px solid #d5dce7;
-  border-radius:7px 0 0 7px;
-  outline:none;
-  font-size:13px;
-  box-sizing:border-box;
-}
-
-.search-box button{
-  padding:9px 14px;
-  border:none;
-  background:#168cff;
-  color:white;
-  border-radius:0 7px 7px 0;
-  font-weight:bold;
-  font-size:13px;
-  white-space:nowrap;
-}
-
-/* =========================
-   FEATURED
-========================= */
-
-.featured{
-  background:#f5f7fb;
-}
-
-.featured-grid{
-  display:grid;
-  grid-template-columns:1.5fr 1fr;
-  gap:20px;
-}
-
-.featured-main{
-  min-height:340px;
-
-  background:
-  linear-gradient(
-    0deg,
-    rgba(0,0,0,.85),
-    rgba(0,0,0,.08)
-  ),
-  url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80");
-
-  background-size:cover;
-  background-position:center;
-
-  border-radius:16px;
+    background-size: cover;
+    background-position: center 52%;
 
-  padding:30px;
+    display: flex;
+    align-items: center;
 
-  color:white;
-
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-end;
-
-  box-shadow:
-  0 8px 30px rgba(0,0,0,.12);
-}
-
-.badge{
-  display:inline-block;
-  background:#168cff;
-  color:white;
-  padding:5px 10px;
-  border-radius:20px;
-  font-size:11px;
-  width:max-content;
-  margin-bottom:10px;
-}
-
-.featured-main h3{
-  font-size:27px;
-  margin-bottom:8px;
-}
-
-.featured-main p{
-  color:#e5e7eb;
-  font-size:14px;
-}
-
-.featured-list{
-  display:flex;
-  flex-direction:column;
-  gap:14px;
-}
-
-.post-card{
-  background:white;
-  border-radius:13px;
-  padding:15px;
-  display:flex;
-  gap:14px;
-
-  box-shadow:
-  0 5px 18px rgba(0,0,0,.06);
-
-  transition:.3s;
-}
-
-.post-card:hover{
-  transform:translateX(4px);
-}
-
-.post-img{
-  width:105px;
-  height:80px;
-  border-radius:9px;
-  object-fit:cover;
-}
-
-.post-card h4{
-  font-size:15px;
-  line-height:1.3;
-  margin-bottom:5px;
-}
-
-.post-card p{
-  color:#64748b;
-  font-size:12px;
-}
-
-
-/* =========================
-   BLOG
-========================= */
-
-.blog-area{
-  background:white;
-}
-
-.latest-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:18px;
-}
-
-.blog-card{
-  background:white;
-  border-radius:14px;
-  overflow:hidden;
-
-  box-shadow:
-  0 5px 20px rgba(0,0,0,.07);
-
-  transition:.3s;
+    padding: 0 4.7%;
 }
 
-.blog-card:hover{
-  transform:translateY(-5px);
+.hero-content {
+    max-width: 610px;
 }
 
-.blog-card img{
-  width:100%;
-  height:160px;
-  object-fit:cover;
-}
-
-.blog-card-content{
-  padding:17px;
-}
+.hero-small {
+    color: #c9d7e5;
 
-.blog-card h3{
-  font-size:17px;
-  margin:8px 0;
-}
+    font-size: 10px;
+    font-weight: bold;
 
-.blog-card p{
-  color:#64748b;
-  font-size:13px;
-}
+    letter-spacing: 2px;
 
-.blog-date{
-  color:#168cff;
-  font-size:11px;
-  font-weight:bold;
+    margin-bottom: 8px;
 }
-
 
-/* =========================
-   ABOUT
-========================= */
+.hero h1 {
+    font-size: 38px;
 
-.about{
-  background:#f5f7fb;
-}
+    line-height: 1.08;
 
-.about-content{
-  max-width:850px;
-  margin:auto;
-  text-align:center;
+    margin-bottom: 12px;
 }
 
-.about-content p{
-  color:#64748b;
-  margin-bottom:15px;
+.hero h1 span {
+    color: #159eff;
 }
-
 
-/* =========================
-   WHY VIDENEST
-========================= */
+.hero-text {
+    max-width: 530px;
 
-.features{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
+    color: #edf2f7;
 
-.feature{
-  background:white;
-  padding:30px 20px;
-  text-align:center;
+    font-size: 13px;
 
-  border-radius:15px;
+    line-height: 1.55;
 
-  box-shadow:
-  0 5px 20px rgba(0,0,0,.06);
+    margin-bottom: 18px;
 }
 
-.feature-icon{
-  font-size:40px;
-  margin-bottom:10px;
+.hero-buttons {
+    display: flex;
+    gap: 12px;
 }
 
-.feature p{
-  color:#64748b;
-  font-size:14px;
-}
+.hero-button {
+    display: inline-flex;
 
+    align-items: center;
+    justify-content: center;
 
-/* =========================
-   NEWSLETTER
-========================= */
+    padding: 10px 18px;
 
-.newsletter{
-  background:#081525;
-  color:white;
-  text-align:center;
-}
+    border-radius: 8px;
 
-.newsletter h2{
-  font-size:30px;
-  margin-bottom:8px;
+    font-size: 11px;
+    font-weight: bold;
 }
 
-.newsletter p{
-  color:#aebbd0;
-  margin-bottom:22px;
+.hero-primary {
+    background: #168cff;
+    color: white;
 }
 
-.newsletter-box{
-  max-width:550px;
-  margin:auto;
-  display:flex;
+.hero-secondary {
+    border: 1px solid white;
+    color: white;
+    background: rgba(0,0,0,.10);
 }
 
-.newsletter-box input{
-  flex:1;
-  padding:14px;
-  border:none;
-  outline:none;
-  border-radius:8px 0 0 8px;
-}
 
-.newsletter-box button{
-  border:none;
-  background:#168cff;
-  color:white;
-  padding:14px 22px;
-  border-radius:0 8px 8px 0;
-  font-weight:bold;
-}
+/* =====================================================
+   MAIN WRAPPER
+===================================================== */
 
+.container {
+    width: 91%;
 
-/* =========================
-   CONTACT
-========================= */
+    max-width: 1080px;
 
-.contact{
-  background:white;
+    margin: 0 auto;
 }
 
-.contact-form{
-  max-width:650px;
-  margin:auto;
-}
 
-.contact-form input,
-.contact-form textarea{
-  width:100%;
-  padding:14px;
-  margin-bottom:14px;
-
-  border:1px solid #d5dce7;
-  border-radius:8px;
-  outline:none;
-  font-size:15px;
-}
+/* =====================================================
+   CATEGORY CARDS
+===================================================== */
 
-.contact-form textarea{
-  height:140px;
-  resize:vertical;
-}
+.categories {
 
-.contact-form button{
-  width:100%;
-  padding:14px;
+    display: grid;
 
-  background:#168cff;
-  color:white;
+    grid-template-columns:
+        repeat(6, 1fr);
 
-  border:none;
-  border-radius:8px;
+    gap: 10px;
 
-  font-weight:bold;
-  font-size:16px;
+    padding: 26px 0 24px;
 }
 
+.category {
 
-/* =========================
-   FOOTER
-========================= */
+    height: 90px;
 
-footer{
-  background:#081525;
-  color:white;
-  padding:40px 7% 20px;
-}
-
-.footer-grid{
-  display:grid;
-  grid-template-columns:2fr 1fr 1fr 1fr;
-  gap:30px;
-}
-
-.footer-logo{
-  font-size:25px;
-  font-weight:bold;
-  margin-bottom:8px;
-}
+    background: #f9fafc;
 
-.footer-logo span{
-  color:#20d4ff;
-}
+    border: 1px solid #e6eaf0;
 
-.footer-about{
-  color:#94a3b8;
-  font-size:13px;
-  max-width:300px;
-}
+    border-radius: 7px;
 
-footer h4{
-  margin-bottom:12px;
-}
+    display: flex;
 
-.footer-links a{
-  display:block;
-  color:#aebbd0;
-  font-size:13px;
-  margin-bottom:7px;
-}
+    flex-direction: column;
 
-.footer-links a:hover{
-  color:#20d4ff;
-}
+    align-items: center;
+    justify-content: center;
 
-.footer-bottom{
-  border-top:1px solid rgba(255,255,255,.1);
-  margin-top:30px;
-  padding-top:18px;
+    text-align: center;
 
-  display:flex;
-  justify-content:space-between;
+    cursor: pointer;
 
-  color:#78879d;
-  font-size:12px;
+    transition: .2s;
 }
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:900px){
-
-  nav{
-    display:none;
-
-    position:absolute;
-    top:72px;
-    left:0;
-
-    width:100%;
-
-    background:#081525;
 
-    flex-direction:column;
+.category:hover {
 
-    padding:10px 0 18px;
+    transform: translateY(-2px);
 
     box-shadow:
-    0 10px 20px rgba(0,0,0,.2);
-  }
+        0 5px 15px rgba(20,40,70,.09);
+}
 
-  nav.active{
-    display:flex;
-  }
+.category.active {
 
-  nav a{
-    width:100%;
-    text-align:center;
-    margin:0;
-    padding:12px;
-  }
+    background: #168cff;
 
-  .menu-btn{
-    display:block;
-  }
+    border-color: #168cff;
 
-  .hero{
-    min-height:520px;
-    padding:65px 6%;
-    background-position:center;
-  }
+    color: white;
+}
 
-  .hero h1{
-    font-size:39px;
-  }
+.category-icon {
 
-  .hero-description{
-    font-size:15px;
-  }
+    font-size: 23px;
 
-  .categories{
-    grid-template-columns:repeat(2,1fr);
-  }
+    line-height: 1;
 
-  .featured-grid{
-    grid-template-columns:1fr;
-  }
+    margin-bottom: 8px;
+}
 
-  .latest-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
+.category-title {
 
-  .footer-grid{
-    grid-template-columns:1fr 1fr;
-  }
+    font-size: 12px;
+
+    font-weight: 700;
+
+    margin-bottom: 3px;
+}
+
+.category-description {
+
+    font-size: 8px;
+
+    color: #6e7b8b;
+}
+
+.category.active
+.category-description {
+
+    color: #e9f5ff;
+}
+
+
+/* =====================================================
+   CONTENT GRID
+===================================================== */
+
+.content-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 2.15fr)
+        minmax(265px, .85fr);
+
+    gap: 22px;
+
+    padding-bottom: 27px;
+}
+
+
+/* =====================================================
+   SECTION HEADER
+===================================================== */
+
+.section-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 11px;
+}
+
+.section-title {
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+.view-all {
+
+    color: #168cff;
+
+    font-size: 10px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   FEATURED AREA
+===================================================== */
+
+.featured-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        1.35fr
+        .95fr;
+
+    gap: 12px;
+}
+
+
+/* BIG FEATURE */
+
+.featured-main {
+
+    height: 306px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 7px;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+.featured-main img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.featured-main::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            transparent 20%,
+            rgba(0,0,0,.88) 100%
+        );
+}
+
+.featured-info {
+
+    position: absolute;
+
+    left: 16px;
+    right: 16px;
+    bottom: 15px;
+
+    z-index: 2;
+}
+
+.badge {
+
+    display: inline-block;
+
+    background: #168cff;
+
+    color: white;
+
+    padding: 3px 9px;
+
+    border-radius: 15px;
+
+    font-size: 8px;
+
+    font-weight: bold;
+
+    margin-bottom: 7px;
+}
+
+.featured-info h3 {
+
+    font-size: 20px;
+
+    line-height: 1.15;
+
+    margin-bottom: 8px;
+}
+
+.featured-info p {
+
+    font-size: 10px;
+
+    line-height: 1.45;
+
+    color: #e8edf2;
+
+    max-width: 390px;
+
+    margin-bottom: 10px;
+}
+
+.featured-meta {
+
+    font-size: 8px;
+
+    color: #d8e1ea;
+}
+
+
+/* SMALL FEATURED */
+
+.featured-small-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+.small-feature {
+
+    height: 96px;
+
+    display: flex;
+
+    background: white;
+
+    border: 1px solid #e5eaf0;
+
+    border-radius: 7px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.small-feature:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 4px 12px rgba(20,40,70,.08);
+}
+
+.small-feature img {
+
+    width: 88px;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.small-info {
+
+    padding: 9px;
+
+    flex: 1;
+}
+
+.small-info .badge {
+
+    margin-bottom: 4px;
+
+    font-size: 7px;
+
+    padding: 2px 7px;
+}
+
+.small-info h4 {
+
+    font-size: 11px;
+
+    line-height: 1.25;
+
+    margin-bottom: 5px;
+}
+
+.small-meta {
+
+    color: #8995a2;
+
+    font-size: 7.5px;
+}
+
+
+/* =====================================================
+   SIDEBAR SEARCH
+===================================================== */
+
+.search-box {
+
+    height: 38px;
+
+    display: flex;
+
+    background: white;
+
+    border: 1px solid #e4e9ef;
+
+    border-radius: 7px;
+
+    overflow: hidden;
+
+    margin-bottom: 20px;
+}
+
+.search-box input {
+
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    padding: 0 12px;
+
+    font-size: 10px;
+
+    color: #1d2939;
+}
+
+.search-box button {
+
+    width: 40px;
+
+    border: none;
+
+    background: #168cff;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   POPULAR POSTS
+===================================================== */
+
+.popular-box {
+
+    background: white;
+}
+
+.popular-heading {
+
+    font-size: 16px;
+
+    margin-bottom: 12px;
+}
+
+.popular-post {
+
+    display: grid;
+
+    grid-template-columns:
+        22px
+        82px
+        1fr;
+
+    gap: 7px;
+
+    align-items: center;
+
+    margin-bottom: 10px;
+
+    cursor: pointer;
+}
+
+.popular-number {
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+
+    background: #168cff;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 9px;
+
+    font-weight: bold;
+}
+
+.popular-post img {
+
+    width: 82px;
+    height: 58px;
+
+    object-fit: cover;
+
+    border-radius: 6px;
+}
+
+.popular-post h4 {
+
+    font-size: 10px;
+
+    line-height: 1.3;
+
+    margin-bottom: 4px;
+}
+
+.popular-meta {
+
+    font-size: 7.5px;
+
+    color: #168cff;
+}
+
+
+/* =====================================================
+   JOIN BOX
+===================================================== */
+
+.join-box {
+
+    height: 111px;
+
+    margin-top: 13px;
+
+    border-radius: 7px;
+
+    padding: 13px;
+
+    color: white;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(5,27,51,.82),
+            rgba(5,27,51,.90)
+        ),
+        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=700&q=80");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.join-box h3 {
+
+    font-size: 15px;
+
+    margin-bottom: 3px;
+}
+
+.join-box p {
+
+    font-size: 8px;
+
+    color: #e0e8ef;
+
+    margin-bottom: 9px;
+}
+
+.subscribe-box {
+
+    height: 29px;
+
+    display: flex;
+
+    overflow: hidden;
+
+    border-radius: 5px;
+
+    background: white;
+}
+
+.subscribe-box input {
+
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    padding: 0 8px;
+
+    font-size: 8px;
+}
+
+.subscribe-box button {
+
+    width: 80px;
+
+    border: none;
+
+    background: #168cff;
+
+    color: white;
+
+    font-size: 8px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   LATEST ARTICLES
+===================================================== */
+
+.latest {
+
+    margin-top: 28px;
+}
+
+.latest-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 11px;
+}
+
+.article {
+
+    background: white;
+
+    border: 1px solid #e4e9ef;
+
+    border-radius: 7px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.article:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 15px rgba(20,40,70,.08);
+}
+
+.article img {
+
+    width: 100%;
+
+    height: 91px;
+
+    object-fit: cover;
+}
+
+.article-content {
+
+    padding: 9px 10px 11px;
+}
+
+.article-badge {
+
+    display: inline-block;
+
+    background: #eff6ff;
+
+    color: #168cff;
+
+    padding: 2px 7px;
+
+    border-radius: 12px;
+
+    font-size: 7px;
+
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+
+.article h3 {
+
+    font-size: 10.5px;
+
+    line-height: 1.35;
+
+    margin-bottom: 8px;
+}
+
+.article-meta {
+
+    color: #8995a2;
+
+    font-size: 7px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    background: #071525;
+
+    color: white;
+
+    padding: 23px 4.5% 10px;
+}
+
+.footer-grid {
+
+    max-width: 1080px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.35fr
+        1.1fr
+        1fr
+        .9fr;
+
+    gap: 40px;
+
+    padding-bottom: 16px;
+}
+
+.footer-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 6px;
+}
+
+.footer-logo-mark {
+
+    width: 30px;
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #1678ff,
+            #22d3ee
+        );
+
+    color: white;
+
+    font-weight: bold;
+
+    clip-path: polygon(
+        0 0,
+        45% 0,
+        62% 28%,
+        82% 0,
+        100% 0,
+        68% 100%,
+        47% 100%
+    );
+}
+
+.footer-logo-text {
+
+    font-size: 20px;
+
+    font-weight: 800;
+}
+
+.footer-logo-text span {
+
+    color: #159eff;
+}
+
+.footer-brand-text {
+
+    color: #aebdcb;
+
+    font-size: 8px;
+
+    line-height: 1.5;
+
+    max-width: 220px;
+
+    margin-bottom: 8px;
+}
+
+.socials {
+
+    display: flex;
+
+    gap: 8px;
+}
+
+.socials span {
+
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #14283f;
+
+    border-radius: 50%;
+
+    font-size: 8px;
+}
+
+.footer-column h4 {
+
+    font-size: 10px;
+
+    margin-bottom: 8px;
+}
+
+.footer-column a {
+
+    display: block;
+
+    color: #b5c1ce;
+
+    font-size: 8px;
+
+    margin-bottom: 4px;
+}
+
+.footer-column a:hover {
+
+    color: #159eff;
+}
+
+.footer-bottom {
+
+    max-width: 1080px;
+
+    margin: auto;
+
+    border-top: 1px solid #1d3044;
+
+    padding-top: 9px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #7f8d9c;
+
+    font-size: 7px;
+}
+
+.footer-slogan {
+
+    color: #d3dce5;
+    font-style: italic;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .logo {
+        min-width: auto;
+    }
+
+    nav {
+        gap: 13px;
+    }
+
+    nav a {
+        font-size: 10px;
+    }
+
+    .header-actions {
+        display: none;
+    }
+
+    .categories {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
 
 }
 
 
-@media(max-width:600px){
+@media (max-width: 650px) {
 
-  section{
-    padding:50px 6%;
-  }
+    header {
+        height: 60px;
+        padding: 0 5%;
+    }
 
-  .logo-text{
-    font-size:20px;
-  }
+    .logo-name {
+        font-size: 19px;
+    }
 
-  .logo-symbol{
-    width:43px;
-    height:43px;
-  }
+    .logo-mark {
+        width: 33px;
+        height: 37px;
+    }
 
-  .hero{
-    min-height:540px;
-  }
+    .menu-button {
+        display: block;
+    }
 
-  .hero h1{
-    font-size:36px;
-  }
+    nav {
 
-  .hero-tag{
-    font-size:11px;
-  }
+        display: none;
 
-  .categories{
-    grid-template-columns:repeat(2,1fr);
-    gap:12px;
-  }
+        position: absolute;
 
-  .category{
-  padding:15px 10px;
-  min-height:150px;
-  }
-.category-card{
-  padding:18px 10px;
-  border-radius:14px;
+        top: 60px;
+
+        left: 0;
+
+        width: 100%;
+
+        background: #071525;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        padding: 7px 0 10px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        width: 100%;
+
+        text-align: center;
+
+        padding: 10px;
+
+        font-size: 13px;
+    }
+
+    nav a.active::after {
+        display: none;
+    }
+
+
+    .hero {
+
+        height: auto;
+
+        min-height: 390px;
+
+        padding: 45px 7%;
+
+        background-position: 62% center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-text {
+        font-size: 12px;
+    }
+
+
+    .categories {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 8px;
+
+        padding-top: 18px;
+    }
+
+
+    .featured-layout {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .featured-main {
+
+        height: 285px;
+    }
+
+
+    .latest-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .footer-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 25px;
+    }
+
 }
 
-.category-icon{
-  font-size:30px;
-  margin-bottom:8px;
-}
 
-.category-card h3{
-  font-size:17px;
-  margin-bottom:5px;
-}
+@media (max-width: 420px) {
 
-.category-card p{
-  font-size:13px;
-  line-height:1.4;
-}
-  .featured-main{
-    min-height:300px;
-    padding:22px;
-  }
+    .latest-grid {
+        grid-template-columns: 1fr;
+    }
 
-  .featured-main h3{
-    font-size:23px;
-  }
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
 
-  .latest-grid{
-    grid-template-columns:1fr;
-  }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 5px;
+    }
 
-  .features{
-    grid-template-columns:1fr;
-  }
-
-  .newsletter-box{
-    flex-direction:column;
-    gap:10px;
-  }
-
-  .newsletter-box input,
-  .newsletter-box button{
-    border-radius:8px;
-    width:100%;
-  }
-
-  .footer-grid{
-    grid-template-columns:1fr;
-  }
-
-  .footer-bottom{
-    flex-direction:column;
-    gap:8px;
-  }
-.menu-btn{
-    display:block;
-}
-
-#mainNav{
-    display:none;
-    flex-direction:column;
-    position:absolute;
-    top:70px;
-    right:20px;
-    background:#061426;
-    padding:15px;
-    border-radius:12px;
-    z-index:9999;
-}
-
-#mainNav.active{
-    display:flex;
-}
 }
 
 </style>
@@ -892,1046 +1354,1155 @@ footer h4{
 <body>
 
 
-<!-- =========================
+<!-- =====================================================
      HEADER
-========================= -->
+===================================================== -->
 
 <header>
 
-<a href="#home" class="brand">
+    <a href="#home" class="logo">
 
-<div class="logo-symbol">
-V
-</div>
+        <div class="logo-mark">
+            V
+        </div>
 
-<div>
+        <div>
 
-<div class="logo-text">
-VIDE<span>NEST</span>
-</div>
+            <div class="logo-name">
+                VIDE<span>NEST</span>
+            </div>
 
-<div class="tagline">
-DISCOVER • LEARN • STAY AHEAD
-</div>
+            <div class="logo-tagline">
+                Learn | Explore | Grow
+            </div>
 
-</div>
+        </div>
 
-</a>
-
-
-<button
-class="menu-btn"
-onclick="toggleMenu()">
-
-☰
-
-</button>
+    </a>
 
 
-<nav id="mainNav">
+    <nav id="mainNav">
 
-<a href="#home">Home</a>
+        <a href="#home" class="active">
+            Home
+        </a>
 
-<a href="#categories">
-Categories
-</a>
+        <a href="#blog">
+            Blog
+        </a>
 
-<a href="#blog">
-Blog
-</a>
+        <a href="tech.html">
+            Tech
+        </a>
 
-<a href="#about">
-About
-</a>
+        <a href="ai.html">
+            AI
+        </a>
 
-<a href="#contact">
-Contact
-</a>
+        <a href="#latest">
+            Lifestyle
+        </a>
 
-<a href="terms.html">
-Terms & Conditions
-</a>
+        <a href="#latest">
+            History
+        </a>
 
-<a href="privacy.html">
-Privacy Policy
-</a>
+        <a href="#footer">
+            About
+        </a>
 
-</nav>
+        <a href="#footer">
+            Contact
+        </a>
+
+    </nav>
+
+
+    <div class="header-actions">
+
+        <button
+            class="header-icon"
+            onclick="focusSearch()">
+            🔍
+        </button>
+
+        <button
+            class="header-icon"
+            onclick="toggleDark()">
+            🌙
+        </button>
+
+        <button
+            class="connect"
+            onclick="subscribe()">
+            ✉ Stay Connected ✈
+        </button>
+
+    </div>
+
+
+    <button
+        class="menu-button"
+        onclick="toggleMenu()">
+        ☰
+    </button>
 
 </header>
 
 
 
-<!-- =========================
+<!-- =====================================================
      HERO
-========================= -->
+===================================================== -->
 
 <section
-class="hero"
-id="home">
+    class="hero"
+    id="home">
 
-<div class="hero-content">
+    <div class="hero-content">
 
-<p class="hero-tag">
-WELCOME TO VIDENEST
-</p>
+        <div class="hero-small">
+            WELCOME TO VIDENEST
+        </div>
 
-<h1>
-Better Ideas.<br>
-<span>A Brighter Future.</span>
-</h1>
+        <h1>
+            Better Ideas.<br>
+            <span>A Brighter Future.</span>
+        </h1>
 
-<p class="hero-description">
+        <p class="hero-text">
 
-VIDENEST is your space to learn,
-explore and grow.
+            VIDENEST is your space to learn,
+            explore and grow.<br>
 
-We share useful technology,
-AI insights, mobile guides,
-lifestyle tips and inspiring content
-— all in one place.
+            We share helpful articles, tech tips,
+            AI insights, history stories<br>
 
-</p>
+            and much more — all in one place.
 
-
-<div class="hero-buttons">
-
-<a
-href="#blog"
-class="btn primary-btn">
-
-Explore Blog
-
-</a>
+        </p>
 
 
-<a
-href="#about"
-class="btn secondary-btn">
+        <div class="hero-buttons">
 
-Learn More
+            <a
+                href="#blog"
+                class="hero-button hero-primary">
+                ✉ Explore Blog
+            </a>
 
-</a>
+            <a
+                href="#featured"
+                class="hero-button hero-secondary">
+                ▶ Watch Our Story
+            </a>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 </section>
 
 
 
-<!-- =========================
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<div class="container">
+
+
+<!-- =====================================================
      CATEGORIES
-========================= -->
-
-<section id="categories">
-
-<h2 class="section-title">
-Explore Categories
-</h2>
-
-<p class="section-description">
-Explore different topics and discover
-useful information.
-</p>
-
-
-<div class="categories" style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-gap:20px;
-margin-top:30px;
-">
-
-<div class="category"
-     onclick="window.location.href='https://rzaib134-sudo.github.io/videnest/tech.html'"
-     style="
-padding:25px 18px;
-text-align:center;
-border-radius:20px;
-background:linear-gradient(145deg,#ffffff,#eef2f7);
-box-shadow:0 10px 25px rgba(0,0,0,0.10);
-transition:0.3s;
-cursor:pointer;
-">
-
-<div class="category-icon" style="
-font-size:30px;
-margin-bottom:12px;
-">
-💻
-</div>
-
-<h3>Tech</h3>
-
-<p>
-Gadgets, tips and tutorials
-</p>
-
-</div>
-
-
-<div class="category"
-     onclick="window.location.href='https://rzaib134-sudo.github.io/videnest/ai.html'"
-     style="
-padding:25px 18px;
-text-align:center;
-border-radius:20px;
-background:linear-gradient(145deg,#ffffff,#eef2f7);
-box-shadow:0 10px 25px rgba(0,0,0,0.10);
-transition:0.3s;
-cursor:pointer;
-">
-
-<div class="category-icon" style="
-font-size:30px;
-margin-bottom:12px;
-">
-🤖
-</div>
-
-<h3>AI</h3>
-
-<p>
-Tools, guides and future
-</p>
-
-</div>
-
-
-<div class="category" style="
-padding:25px 18px;
-text-align:center;
-border-radius:20px;
-background:linear-gradient(145deg,#ffffff,#eef2f7);
-box-shadow:0 10px 25px rgba(0,0,0,0.10);
-transition:0.3s;
-">
-
-<div class="category-icon" style="
-font-size:30px;
-margin-bottom:12px;
-">
-📱
-</div>
-
-<h3>Mobile</h3>
-
-<p>
-Mobile tips and useful apps
-</p>
-
-</div>
-
-
-<div class="category" style="
-padding:25px 18px;
-text-align:center;
-border-radius:20px;
-background:linear-gradient(145deg,#ffffff,#eef2f7);
-box-shadow:0 10px 25px rgba(0,0,0,0.10);
-transition:0.3s;
-">
-
-<div class="category-icon" style="
-font-size:30px;
-margin-bottom:12px;
-">
-🌿
-</div>
-
-<h3>Lifestyle</h3>
-
-<p>
-Daily life and useful ideas
-</p>
-
-</div>
-
-
-<div class="category" style="
-padding:25px 18px;
-text-align:center;
-border-radius:20px;
-background:linear-gradient(145deg,#ffffff,#eef2f7);
-box-shadow:0 10px 25px rgba(0,0,0,0.10);
-transition:0.3s;
-">
-
-<div class="category-icon" style="
-font-size:30px;
-margin-bottom:12px;
-">
-📚
-</div>
-
-<h3>Education</h3>
-
-<p>
-Learning and skills
-</p>
-
-</div>
-
-
-<div class="category" style="
-padding:25px 18px;
-text-align:center;
-border-radius:20px;
-background:linear-gradient(145deg,#ffffff,#eef2f7);
-box-shadow:0 10px 25px rgba(0,0,0,0.10);
-transition:0.3s;
-">
-
-<div class="category-icon" style="
-font-size:30px;
-margin-bottom:12px;
-">
-✨
-</div>
-
-<h3>More</h3>
-
-<p>
-Explore more topics
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-
-
-
-
-
-<!-- =========================
-     SEARCH
-========================= -->
-
-<section class="search-section">
-
-<h2 class="section-title">
-Search VIDENEST
-</h2>
-
-<p class="section-description">
-Find useful information and articles.
-</p>
-
-<div class="search-box">
-
-<input
-type="text"
-id="searchInput"
-placeholder="Search articles...">
-
-<button onclick="searchVidenest()">
-Search
-</button>
-
-</div>
-
-</section>
-
-
-
-
-
-<!-- =========================
-     FEATURED POSTS
-========================= -->
-
-<section class="featured">
-
-<h2 class="section-title">
-🔥 Featured Posts
-</h2>
-
-<p class="section-description">
-Discover some of our featured content.
-</p>
-
-
-<div class="featured-grid">
-
-
-<a href="best-free-ai-tools.html"
-style="text-decoration:none;color:inherit;display:block;">
-
-<div class="featured-main">
-
-<span class="badge">
-AI & TECH
-</span>
-
-<h3>
-Best Free AI Tools for Mobile
-</h3>
-
-<p>
-Discover useful AI tools that
-you can use directly from your
-mobile phone.
-</p>
-
-</div>
-
-</a>
-
-
-<div class="featured-list">
-
-
-<div class="post-card">
-
-<img
-class="post-img"
-src="https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&w=500&q=80">
-
-<div>
-
-<h4>
-How AI Can Help in Daily Life
-</h4>
-
-<p>
-AI tools and practical ideas.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="post-card">
-
-<img
-class="post-img"
-src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?auto=format&fit=crop&w=500&q=80">
-
-<div>
-
-<h4>
-Beautiful Places in Pakistan
-</h4>
-
-<p>
-Travel and amazing places.
-</p>
-
-</div>
-
-</div>
-
-
-<a
-href="work-from-home-tips.html"
-style="text-decoration:none;color:inherit;display:block;">
-
-<div class="post-card">
-
-<img
-class="post-img"
-src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=500&q=80">
-
-<div>
-
-<h4>
-Work From Home Tips
-</h4>
-
-<p>
-Simple productivity ideas.
-</p>
-
-</div>
-
-</div>
-
-</a>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-
-<!-- =========================
-     BLOG
-========================= -->
+===================================================== -->
 
 <section
-class="blog-area"
-id="blog">
-
-<h2 class="section-title">
-Latest Articles
-</h2>
-
-<p class="section-description">
-Useful guides, ideas and information
-from VIDENEST.
-</p>
+    class="categories"
+    id="categories">
 
 
-<div class="latest-grid">
+    <div
+        class="category active"
+        onclick="window.location.href='tech.html'">
+
+        <div class="category-icon">
+            💻
+        </div>
+
+        <div class="category-title">
+            Tech
+        </div>
+
+        <div class="category-description">
+            Gadgets, Tips, Tutorials
+        </div>
+
+    </div>
 
 
-<a
-href="how-ai-can-help-you-every-day.html"
-style="text-decoration:none;color:inherit;display:block;">
+    <div class="category"
+        onclick="window.location.href='ai.html'">
 
-<div class="blog-card">
+        <div class="category-icon">
+            🤖
+        </div>
 
-<img
-src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=700&q=80">
+        <div class="category-title">
+            AI
+        </div>
 
-<div class="blog-card-content">
+        <div class="category-description">
+            Tools, Guides, Future
+        </div>
 
-<span class="blog-date">
-AI • TECH
-</span>
-
-<h3>
-How AI Can Help You Every Day
-</h3>
-
-<p>
-Simple ways to use artificial
-intelligence in daily life.
-</p>
-
-</div>
-
-</div>
-
-</a>
+    </div>
 
 
+    <div
+        class="category"
+        onclick="scrollToLatest()">
 
-<a
-href="beautiful-places-in-pakistan.html"
-style="text-decoration:none;color:inherit;display:block;">
+        <div class="category-icon">
+            🍃
+        </div>
 
-<div class="blog-card">
+        <div class="category-title">
+            Lifestyle
+        </div>
 
-<img
-src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=700&q=80">
+        <div class="category-description">
+            Health, Travel, Daily Life
+        </div>
 
-<div class="blog-card-content">
-
-<span class="blog-date">
-TRAVEL
-</span>
-
-<h3>
-Beautiful Places in Pakistan
-</h3>
-
-<p>
-Explore amazing destinations
-and natural beauty.
-</p>
-
-</div>
-
-</div>
-
-</a>
+    </div>
 
 
+    <div
+        class="category"
+        onclick="scrollToLatest()">
+
+        <div class="category-icon">
+            🏛️
+        </div>
+
+        <div class="category-title">
+            History
+        </div>
+
+        <div class="category-description">
+            Past, Stories, Lessons
+        </div>
+
+    </div>
 
 
-<div class="blog-card">
+    <div
+        class="category"
+        onclick="scrollToLatest()">
 
-<a
-href="work-from-home-tips.html"
-style="text-decoration:none;color:inherit;display:block;">
+        <div class="category-icon">
+            🖊️
+        </div>
 
-<div class="blog-card">
+        <div class="category-title">
+            Education
+        </div>
 
-<img
-src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=700&q=80">
+        <div class="category-description">
+            Learn, Skills, Growth
+        </div>
 
-<div class="blog-card-content">
-
-<span class="blog-date">
-LIFESTYLE
-</span>
-
-<h3>
-Work From Home Tips
-</h3>
-
-<p>
-Simple ideas for better
-productivity.
-</p>
-
-</div>
-
-</div>
-
-</a>
+    </div>
 
 
-<div class="blog-card">
+    <div
+        class="category"
+        onclick="scrollToLatest()">
 
-<img
-src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=700&q=80">
+        <div class="category-icon">
+            ▦
+        </div>
 
-<div class="blog-card-content">
+        <div class="category-title">
+            More
+        </div>
 
-<span class="blog-date">
-EDUCATION
-</span>
+        <div class="category-description">
+            Explore All Categories
+        </div>
 
-<h3>
-<a href="education.html">
-Learn New Skills
-</a>
-</h3>
+    </div>
 
-<p>
-Small steps can create
-big improvements.
-</p>
-
-</div>
-
-</div>
-
-
-</div>
 
 </section>
 
 
 
-<!-- =========================
-     ABOUT
-========================= -->
+<!-- =====================================================
+     CONTENT
+===================================================== -->
 
-<section
-class="about"
-id="about">
-
-<h2 class="section-title">
-About VIDENEST
-</h2>
+<div class="content-grid">
 
 
-<div class="about-content">
+<!-- =====================================================
+     LEFT SIDE
+===================================================== -->
 
-<p>
-VIDENEST is a digital information platform
-created to make technology and useful
-information easier to understand.
-</p>
+<div id="blog">
 
-<p>
-Our goal is simple:
-<strong>Discover. Learn. Stay Ahead.</strong>
-</p>
 
-<p>
-From AI and smartphones to lifestyle,
-education, history and practical guides,
-VIDENEST aims to bring useful information
-together in one place.
-</p>
+    <!-- FEATURED -->
+
+    <section id="featured">
+
+        <div class="section-header">
+
+            <h2 class="section-title">
+                🔥 Featured Posts
+            </h2>
+
+            <a
+                href="#latest"
+                class="view-all">
+                View All →
+            </a>
+
+        </div>
+
+
+        <div class="featured-layout">
+
+
+            <!-- BIG CARD -->
+
+            <a
+                href="ai.html"
+                class="featured-main">
+
+                <img
+                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=90"
+                    alt="AI Tools">
+
+                <div class="featured-info">
+
+                    <span class="badge">
+                        Tech
+                    </span>
+
+                    <h3>
+                        Best Free AI Tools for<br>
+                        Mobile in 2025
+                    </h3>
+
+                    <p>
+                        Discover the top free AI tools
+                        you can use on your mobile phone
+                        to boost productivity, create
+                        content and learn new skills.
+                    </p>
+
+                    <div class="featured-meta">
+                        📅 Sep 5, 2025
+                        &nbsp;&nbsp;&nbsp;
+                        ◷ 6 min read
+                    </div>
+
+                </div>
+
+            </a>
+
+
+            <!-- THREE SMALL CARDS -->
+
+            <div class="featured-small-list">
+
+
+                <a
+                    href="#latest"
+                    class="small-feature">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1611262588024-d12430b98920?auto=format&fit=crop&w=400&q=85"
+                        alt="WhatsApp Business">
+
+                    <div class="small-info">
+
+                        <span
+                            class="badge"
+                            style="background:#20a46a;">
+                            Tutorial
+                        </span>
+
+                        <h4>
+                            How to Use WhatsApp
+                            Business on Mobile
+                        </h4>
+
+                        <div class="small-meta">
+                            📅 Sep 3, 2025
+                            &nbsp; • &nbsp;
+                            4 min read
+                        </div>
+
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="#latest"
+                    class="small-feature">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=400&q=85"
+                        alt="Islamic Golden Age">
+
+                    <div class="small-info">
+
+                        <span
+                            class="badge"
+                            style="background:#f39a13;">
+                            History
+                        </span>
+
+                        <h4>
+                            The Great History of
+                            Islamic Golden Age
+                        </h4>
+
+                        <div class="small-meta">
+                            📅 Aug 30, 2025
+                            &nbsp; • &nbsp;
+                            7 min read
+                        </div>
+
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="#latest"
+                    class="small-feature">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=400&q=85"
+                        alt="Lifestyle">
+
+                    <div class="small-info">
+
+                        <span
+                            class="badge"
+                            style="background:#8b4de8;">
+                            Lifestyle
+                        </span>
+
+                        <h4>
+                            Simple Habits for a
+                            Happy Life
+                        </h4>
+
+                        <div class="small-meta">
+                            📅 Aug 27, 2025
+                            &nbsp; • &nbsp;
+                            5 min read
+                        </div>
+
+                    </div>
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         LATEST
+    ================================================== -->
+
+    <section
+        class="latest"
+        id="latest">
+
+        <div class="section-header">
+
+            <h2 class="section-title">
+                📰 Latest Articles
+            </h2>
+
+            <a
+                href="#latest"
+                class="view-all">
+                View All →
+            </a>
+
+        </div>
+
+
+        <div class="latest-grid">
+
+
+            <a
+                href="ai.html"
+                class="article">
+
+                <img
+                    src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=600&q=85"
+                    alt="Artificial Intelligence">
+
+                <div class="article-content">
+
+                    <span class="article-badge">
+                        AI
+                    </span>
+
+                    <h3>
+                        How AI Can Help You
+                        in Daily Life
+                    </h3>
+
+                    <div class="article-meta">
+                        📅 Sep 7, 2025
+                        &nbsp; • &nbsp;
+                        5 min read
+                    </div>
+
+                </div>
+
+            </a>
+
+
+            <a
+                href="#latest"
+                class="article">
+
+                <img
+                    src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=600&q=85"
+                    alt="Beautiful Pakistan">
+
+                <div class="article-content">
+
+                    <span class="article-badge">
+                        Travel
+                    </span>
+
+                    <h3>
+                        Top 5 Beautiful Places
+                        in Pakistan
+                    </h3>
+
+                    <div class="article-meta">
+                        📅 Aug 28, 2025
+                        &nbsp; • &nbsp;
+                        6 min read
+                    </div>
+
+                </div>
+
+            </a>
+
+
+            <a
+                href="#latest"
+                class="article">
+
+                <img
+                    src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=600&q=85"
+                    alt="Work From Home">
+
+                <div class="article-content">
+
+                    <span class="article-badge">
+                        Lifestyle
+                    </span>
+
+                    <h3>
+                        Work From Home Tips
+                        for Better Productivity
+                    </h3>
+
+                    <div class="article-meta">
+                        📅 Aug 22, 2025
+                        &nbsp; • &nbsp;
+                        4 min read
+                    </div>
+
+                </div>
+
+            </a>
+
+
+            <a
+                href="#latest"
+                class="article">
+
+                <img
+                    src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=600&q=85"
+                    alt="History">
+
+                <div class="article-content">
+
+                    <span class="article-badge">
+                        History
+                    </span>
+
+                    <h3>
+                        Lessons We Can Learn
+                        from History
+                    </h3>
+
+                    <div class="article-meta">
+                        📅 Aug 18, 2025
+                        &nbsp; • &nbsp;
+                        5 min read
+                    </div>
+
+                </div>
+
+            </a>
+
+
+        </div>
+
+    </section>
 
 </div>
 
-</section>
+
+
+<!-- =====================================================
+     RIGHT SIDEBAR
+===================================================== -->
+
+<aside>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search articles..."
+            onkeydown="searchEnter(event)">
+
+        <button onclick="searchSite()">
+            🔍
+        </button>
+
+    </div>
 
 
 
-<!-- =========================
-     WHY VIDENEST
-========================= -->
+    <!-- POPULAR POSTS -->
 
-<section>
+    <div class="popular-box">
 
-<h2 class="section-title">
-Why VIDENEST?
-</h2>
-
-<p class="section-description">
-Simple information made for everyday people.
-</p>
+        <h2 class="popular-heading">
+            🔥 Popular Posts
+        </h2>
 
 
-<div class="features">
+        <a
+            href="ai.html"
+            class="popular-post">
+
+            <div class="popular-number">
+                1
+            </div>
+
+            <img
+                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=300&q=85"
+                alt="AI Tools">
+
+            <div>
+
+                <h4>
+                    Best Free AI Tools for
+                    Mobile in 2025
+                </h4>
+
+                <div class="popular-meta">
+                    Tech &nbsp; • &nbsp; Sep 5, 2025
+                </div>
+
+            </div>
+
+        </a>
 
 
-<div class="feature">
+        <a
+            href="#latest"
+            class="popular-post">
 
-<div class="feature-icon">
-🎯
+            <div class="popular-number">
+                2
+            </div>
+
+            <img
+                src="https://images.unsplash.com/photo-1611262588024-d12430b98920?auto=format&fit=crop&w=300&q=85"
+                alt="WhatsApp">
+
+            <div>
+
+                <h4>
+                    How to Use WhatsApp
+                    Business on Mobile
+                </h4>
+
+                <div class="popular-meta">
+                    Tutorial &nbsp; • &nbsp; Sep 3, 2025
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <a
+            href="#latest"
+            class="popular-post">
+
+            <div class="popular-number">
+                3
+            </div>
+
+            <img
+    src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=600&q=90"
+    alt="Islamic Golden Age History">
+                
+            <div>
+
+                <h4>
+                    The Great History of
+                    Islamic Golden Age
+                </h4>
+
+                <div class="popular-meta">
+                    History &nbsp; • &nbsp; Aug 30, 2025
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <a
+            href="#latest"
+            class="popular-post">
+
+            <div class="popular-number">
+                4
+            </div>
+
+            <img
+                src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=300&q=85"
+                alt="Pakistan">
+
+            <div>
+
+                <h4>
+                    Beautiful Places in Pakistan
+                    You Must Visit
+                </h4>
+
+                <div class="popular-meta">
+                    Travel &nbsp; • &nbsp; Aug 25, 2025
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <a
+            href="tech.html"
+            class="popular-post">
+
+            <div class="popular-number">
+                5
+            </div>
+
+            <img
+                src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=300&q=85"
+                alt="Laptop">
+
+            <div>
+
+                <h4>
+                    Best Laptop for Students
+                    in 2025
+                </h4>
+
+                <div class="popular-meta">
+                    Tech &nbsp; • &nbsp; Aug 20, 2025
+                </div>
+
+            </div>
+
+        </a>
+
+
+    </div>
+
+
+
+    <!-- JOIN -->
+
+    <div class="join-box">
+
+        <h3>
+            Join Our Journey
+        </h3>
+
+        <p>
+            Get the latest articles, tips and updates
+            directly in your inbox.
+        </p>
+
+        <div class="subscribe-box">
+
+            <input
+                type="email"
+                id="emailInput"
+                placeholder="Enter your email address">
+
+            <button onclick="subscribe()">
+                ✈ Subscribe
+            </button>
+
+        </div>
+
+    </div>
+
+
+</aside>
+
 </div>
 
-<h3>
-Simple
-</h3>
-
-<p>
-We explain difficult topics
-in easy language.
-</p>
-
 </div>
 
 
-<div class="feature">
 
-<div class="feature-icon">
-💡
-</div>
-
-<h3>
-Useful
-</h3>
-
-<p>
-Practical information that
-can actually help you.
-</p>
-
-</div>
-
-
-<div class="feature">
-
-<div class="feature-icon">
-🚀
-</div>
-
-<h3>
-Future Focused
-</h3>
-
-<p>
-Stay updated with technology,
-AI and digital trends.
-</p>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- =========================
-     NEWSLETTER
-========================= -->
-
-<section class="newsletter">
-
-<h2>
-Stay Updated
-</h2>
-
-<p>
-Get the latest VIDENEST updates
-and articles.
-</p>
-
-
-<div class="newsletter-box">
-
-<input
-type="email"
-id="emailInput"
-placeholder="Enter your email">
-
-
-<button
-onclick="subscribeUser()">
-
-Subscribe
-
-</button>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================
-     CONTACT
-========================= -->
-
-<section
-class="contact"
-id="contact">
-
-<h2 class="section-title">
-Contact VIDENEST
-</h2>
-
-<p class="section-description">
-Have a suggestion or want to contact us?
-Send us a message.
-</p>
-
-
-<div class="contact-form">
-
-<input
-type="text"
-id="name"
-placeholder="Your Name">
-
-
-<input
-type="email"
-id="email"
-placeholder="Your Email">
-
-
-<textarea
-id="message"
-placeholder="Your Message"></textarea>
-
-
-<button
-onclick="sendMessage()">
-
-Send Message
-
-</button>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================
+<!-- =====================================================
      FOOTER
-========================= -->
+===================================================== -->
 
-<footer>
+<footer id="footer">
 
-
-<div class="footer-grid">
-
-
-<div>
-
-<div class="footer-logo">
-VIDE<span>NEST</span>
-</div>
-
-<p class="footer-about">
-VIDENEST is your trusted place for
-technology, AI, mobile, lifestyle,
-education and useful information.
-
-</p>
-
-</div>
+    <div class="footer-grid">
 
 
+        <!-- BRAND -->
 
-<div>
+        <div>
 
-<h4>
-Quick Links
-</h4>
+            <div class="footer-logo">
 
-<div class="footer-links">
+                <div class="footer-logo-mark">
+                    V
+                </div>
 
-<a href="#home">
-Home
-</a>
+                <div class="footer-logo-text">
+                    VIDE<span>NEST</span>
+                </div>
 
-<a href="#blog">
-Blog
-</a>
+            </div>
 
-<a href="#about">
-About
-</a>
+            <p class="footer-brand-text">
 
-<a href="#contact">
-Contact
-</a>
+                VIDENEST is your trusted platform for
+                tech, AI, lifestyle, history and more.
+                Let's learn and grow together.
 
-</div>
+            </p>
 
-</div>
+            <div class="socials">
 
+                <span>▶</span>
+                <span>f</span>
+                <span>◎</span>
+                <span>𝕏</span>
+                <span>◉</span>
 
+            </div>
 
-<div>
-
-<h4>
-Categories
-</h4>
-
-<div class="footer-links">
-
-<a href="#categories">
-Tech
-</a>
-
-<a href="#categories">
-AI
-</a>
-
-<a href="#categories">
-Lifestyle
-</a>
-
-<a href="#categories">
-History
-</a>
-
-</div>
-
-</div>
+        </div>
 
 
+        <!-- QUICK LINKS -->
 
-<div>
+        <div class="footer-column">
 
-<h4>
-Legal
-</h4>
+            <h4>
+                Quick Links
+            </h4>
 
-<div class="footer-links">
+            <a href="#home">
+                Home
+            </a>
 
-<a href="privacy.html">
-Privacy Policy
-</a>
+            <a href="#blog">
+                Blog
+            </a>
 
-<a href="terms.html">
-Terms & Conditions
-</a>
+            <a href="#footer">
+                About Us
+            </a>
 
-</div>
+            <a href="#footer">
+                Contact
+            </a>
 
-</div>
-
-
-</div>
-
+        </div>
 
 
-<div class="footer-bottom">
+        <!-- CATEGORIES -->
 
-<span>
-© 2026 VIDENEST. All Rights Reserved.
-</span>
+        <div class="footer-column">
 
-<span>
-Discover • Learn • Stay Ahead.
-</span>
+            <h4>
+                Categories
+            </h4>
 
-</div>
+            <a href="tech.html">
+                Tech
+            </a>
 
+            <a href="ai.html">
+                AI
+            </a>
+
+            <a href="#latest">
+                Lifestyle
+            </a>
+
+            <a href="#latest">
+                History
+            </a>
+
+            <a href="#latest">
+                Education
+            </a>
+
+        </div>
+
+
+        <!-- LEGAL -->
+
+        <div class="footer-column">
+
+            <h4>
+                Legal
+            </h4>
+
+            <a href="privacy.html">
+                Privacy Policy
+            </a>
+
+            <a href="terms.html">
+                Terms & Conditions
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 VIDENEST. All rights reserved.
+        </span>
+
+        <span class="footer-slogan">
+            Learn Today • Build Tomorrow ♥
+        </span>
+
+    </div>
 
 </footer>
 
 
 
-<!-- =========================
+<!-- =====================================================
      JAVASCRIPT
-========================= -->
+===================================================== -->
 
 <script>
 
 
 /* MOBILE MENU */
 
-function toggleMenu(){
-    document.getElementById("mainNav").classList.toggle("active");
+function toggleMenu() {
+
+    document
+        .getElementById("mainNav")
+        .classList
+        .toggle("active");
+
 }
 
-</script>
-<script>
 
-/* VIDENEST SEARCH FUNCTION */
+/* SEARCH */
 
-/* VIDENEST SEARCH FUNCTION */
+function focusSearch() {
 
-function searchVidenest(){
+    const input =
+        document.getElementById("searchInput");
 
-    const input = document.getElementById("searchInput");
+    input.focus();
 
-    if(!input){
-        return;
-    }
-
-    const query = input.value.toLowerCase().trim();
-
-    const cards = document.querySelectorAll(
-        ".blog-card, .featured-main, .category"
-    );
-
-    cards.forEach(function(card){
-
-        const text = card.innerText.toLowerCase();
-
-        if(query === "" || text.includes(query)){
-
-            card.style.display = "";
-
-        }else{
-
-            card.style.display = "none";
-
-        }
-
+    input.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
     });
 
 }
 
 
-/* SEARCH WITH ENTER KEY */
+function searchEnter(event) {
 
-document.addEventListener("DOMContentLoaded", function(){
+    if (event.key === "Enter") {
 
-    const searchInput =
-        document.getElementById("searchInput");
+        searchSite();
 
-    if(searchInput){
+    }
 
-        searchInput.addEventListener(
-            "keydown",
-            function(event){
+}
 
-                if(event.key === "Enter"){
 
-                    event.preventDefault();
+function searchSite() {
 
-                    searchVidenest();
+    const value =
+        document
+            .getElementById("searchInput")
+            .value
+            .toLowerCase()
+            .trim();
 
-                }
 
-            }
+    if (value === "") {
+
+        alert("Please type something to search.");
+
+        return;
+
+    }
+
+
+    const allContent =
+        document.body.innerText.toLowerCase();
+
+
+    if (allContent.includes(value)) {
+
+        document
+            .getElementById("blog")
+            .scrollIntoView({
+                behavior: "smooth"
+            });
+
+    } else {
+
+        alert(
+            "No matching article found on VIDENEST."
         );
 
     }
 
-});
+}
+
+
+/* DARK MODE */
+
+function toggleDark() {
+
+    document
+        .body
+        .classList
+        .toggle("dark");
+
+}
+
+
+/* SUBSCRIBE */
+
+function subscribe() {
+
+    const email =
+        document
+            .getElementById("emailInput")
+            .value
+            .trim();
+
+
+    if (email === "") {
+
+        alert(
+            "Please enter your email address."
+        );
+
+        return;
+
+    }
+
+
+    alert(
+        "Thank you for subscribing to VIDENEST!"
+    );
+
+
+    document
+        .getElementById("emailInput")
+        .value = "";
+
+}
+
+
+/* LATEST */
+
+function scrollToLatest() {
+
+    document
+        .getElementById("latest")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+}
+
+
+/* CLOSE MOBILE MENU */
+
+document
+    .querySelectorAll("#mainNav a")
+    .forEach(function(link) {
+
+        link.addEventListener(
+            "click",
+            function() {
+
+                document
+                    .getElementById("mainNav")
+                    .classList
+                    .remove("active");
+
+            }
+        );
+
+    });
 
 </script>
+
+
 </body>
 </html>
