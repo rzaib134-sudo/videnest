@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>More | VIDENEST</title>
+
+<meta name="description" content="Explore useful guides, interesting topics, practical tips and more on VIDENEST.">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #172033;
+    line-height: 1.7;
+}
+
+header {
+    background: #101827;
+    color: white;
+    padding: 14px 6%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-mark {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #2563eb, #22d3ee);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.logo-text {
+    font-size: 21px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo-text span {
+    color: #22d3ee;
+}
+
+.tagline {
+    font-size: 9px;
+    color: #b8c3d6;
+    letter-spacing: 1.5px;
+}
+
+.menu-button {
+    display: none;
+    margin-left: auto;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+nav {
+    margin-left: auto;
+    display: flex;
+    gap: 18px;
+}
+
+nav a {
+    color: #dbe5f5;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover,
+nav a.active {
+    color: #22d3ee;
+}
+
+.hero {
+    background: linear-gradient(135deg, #101827, #172b4d);
+    color: white;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.hero h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #c8d4e7;
+    max-width: 700px;
+    margin: auto;
+}
+
+.container {
+    max-width: 1050px;
+    margin: 45px auto;
+    padding: 0 20px;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.intro h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.intro p {
+    color: #647086;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    padding: 28px 22px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+    text-align: center;
+}
+
+.icon {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    color: #2563eb;
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #5d687b;
+    font-size: 14px;
+}
+
+footer {
+    background: #101827;
+    color: #b8c3d6;
+    text-align: center;
+    padding: 28px 15px;
+    margin-top: 50px;
+    font-size: 13px;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 12px 18px;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 62px;
+        left: 0;
+        width: 100%;
+        background: #101827;
+        flex-direction: column;
+        gap: 0;
+        padding: 8px 0 12px;
+        z-index: 10;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .hero {
+        padding: 50px 18px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <div class="logo-mark">V</div>
+
+        <div>
+            <div class="logo-text">VIDE<span>NEST</span></div>
+            <div class="tagline">DISCOVER • LEARN • STAY AHEAD</div>
+        </div>
+    </div>
+
+    <button class="menu-button" onclick="toggleMenu()">☰</button>
+
+    <nav id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="index.html#blog">Blog</a>
+        <a href="tech.html">Tech</a>
+        <a href="ai.html">AI</a>
+        <a href="lifestyle.html">Lifestyle</a>
+        <a href="history.html">History</a>
+        <a href="index.html#footer">About</a>
+        <a href="index.html#footer">Contact</a>
+    </nav>
+
+</header>
+
+<section class="hero">
+    <h1>More From VIDENEST</h1>
+
+    <p>
+        Discover useful guides, practical ideas, interesting topics
+        and more helpful content from VIDENEST.
+    </p>
+</section>
+
+<main class="container">
+
+    <div class="intro">
+        <h2>Explore More</h2>
+
+        <p>
+            There is always something new to discover, learn and explore.
+        </p>
+    </div>
+
+    <section class="cards">
+
+        <div class="card">
+            <div class="icon">📱</div>
+            <h3>Mobile Tips</h3>
+            <p>
+                Useful smartphone tips, settings, apps and practical
+                tricks to make everyday mobile use easier.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🌐</div>
+            <h3>Internet Guides</h3>
+            <p>
+                Simple guides about websites, online services,
+                digital tools and useful internet features.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">💡</div>
+            <h3>Useful Ideas</h3>
+            <p>
+                Practical ideas and helpful information that can make
+                everyday tasks simpler and more productive.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🔐</div>
+            <h3>Digital Safety</h3>
+            <p>
+                Learn basic tips for protecting your accounts,
+                personal information and online activities.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📚</div>
+            <h3>Knowledge</h3>
+            <p>
+                Interesting facts, educational topics and information
+                designed to help you learn something new.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🚀</div>
+            <h3>Coming Soon</h3>
+            <p>
+                More useful categories, guides and articles will be
+                added to VIDENEST as the website grows.
+            </p>
+        </div>
+
+    </section>
+
+</main>
+
+<footer id="footer">
+    © 2026 VIDENEST — Discover. Learn. Stay Ahead.
+</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("mainNav").classList.toggle("active");
+}
+
+document.querySelectorAll("#mainNav a").forEach(function(link) {
+    link.addEventListener("click", function() {
+        document.getElementById("mainNav").classList.remove("active");
+    });
+});
+</script>
+
+</body>
+</html>
