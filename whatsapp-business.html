@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>WhatsApp Business: Complete Guide | VIDENEST</title>
+
+<meta name="description"
+      content="Learn what WhatsApp Business is, how it works, and how businesses can use its useful features to communicate with customers.">
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #172033;
+    line-height: 1.7;
+}
+
+header {
+    background: #071525;
+    color: white;
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    padding: 10px 7%;
+    gap: 25px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: auto;
+}
+
+.logo-mark {
+    width: 34px;
+    height: 38px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #2563eb, #22d3ee);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+}
+
+.logo-text {
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: .5px;
+}
+
+.logo-text span {
+    color: #22d3ee;
+}
+
+.tagline {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #aab7c8;
+    margin-top: -3px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+nav a {
+    color: #dce5f1;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+nav a:hover {
+    color: #22d3ee;
+}
+
+.menu-button {
+    display: none;
+    background: none;
+    border: 0;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.container {
+    width: 86%;
+    max-width: 1100px;
+    margin: 35px auto 60px;
+}
+
+.article {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,.07);
+}
+
+.article-image {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    display: block;
+}
+
+.article-content {
+    padding: 35px 7%;
+}
+
+.category-label {
+    display: inline-block;
+    background: #e8f7fb;
+    color: #087f9b;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.intro {
+    font-size: 17px;
+    color: #5c6677;
+    margin-bottom: 28px;
+}
+
+h2 {
+    font-size: 25px;
+    margin: 30px 0 12px;
+}
+
+p {
+    margin-bottom: 16px;
+    color: #394457;
+}
+
+ul {
+    margin: 10px 0 20px 22px;
+}
+
+li {
+    margin-bottom: 8px;
+    color: #394457;
+}
+
+.tip-box {
+    background: #eef8ff;
+    border-left: 4px solid #2563eb;
+    padding: 18px 20px;
+    border-radius: 8px;
+    margin: 25px 0;
+}
+
+.back {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 18px;
+    background: #071525;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+footer {
+    background: #071525;
+    color: #aab7c8;
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 13px;
+}
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 10px 5%;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        background: #071525;
+        flex-direction: column;
+        gap: 0;
+        padding: 8px 0 12px;
+        z-index: 100;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+        padding: 9px;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .container {
+        width: 94%;
+        margin-top: 22px;
+    }
+
+    .article-image {
+        height: 220px;
+    }
+
+    .article-content {
+        padding: 25px 6%;
+    }
+
+    h1 {
+        font-size: 29px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .intro {
+        font-size: 15px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+
+        <div class="logo-mark">
+            V
+        </div>
+
+        <div>
+            <div class="logo-text">
+                VIDE<span>NEST</span>
+            </div>
+
+            <div class="tagline">
+                DISCOVER • LEARN • STAY AHEAD
+            </div>
+        </div>
+
+    </div>
+
+    <nav id="mainNav">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="index.html#blog">
+            Blog
+        </a>
+
+        <a href="tech.html">
+            Tech
+        </a>
+
+        <a href="ai.html">
+            AI
+        </a>
+
+        <a href="lifestyle.html">
+            Lifestyle
+        </a>
+
+        <a href="history.html">
+            History
+        </a>
+
+        <a href="index.html#footer">
+            About
+        </a>
+
+        <a href="index.html#footer">
+            Contact
+        </a>
+
+    </nav>
+
+    <button
+        class="menu-button"
+        onclick="toggleMenu()">
+        ☰
+    </button>
+
+</header>
+
+
+<main class="container">
+
+    <article class="article">
+
+        <img
+            class="article-image"
+            src="https://images.unsplash.com/photo-1611262588024-d12430b98920?auto=format&fit=crop&w=1400&q=85"
+            alt="WhatsApp Business">
+
+        <div class="article-content">
+
+            <span class="category-label">
+                BUSINESS & TECHNOLOGY
+            </span>
+
+            <h1>
+                WhatsApp Business: A Complete Guide for Beginners
+            </h1>
+
+            <p class="intro">
+                WhatsApp Business is a useful communication platform
+                that helps small businesses and professionals connect
+                with customers in a simple and familiar way.
+            </p>
+
+
+            <h2>
+                What is WhatsApp Business?
+            </h2>
+
+            <p>
+                WhatsApp Business is designed for businesses that want
+                to communicate with customers using WhatsApp. It offers
+                business-focused tools that are different from the
+                standard WhatsApp experience.
+            </p>
+
+            <p>
+                A business can create a profile with useful information
+                such as its name, description, category, location and
+                contact details.
+            </p>
+
+
+            <h2>
+                Useful Features
+            </h2>
+
+            <p>
+                Some of the useful features available to businesses
+                include:
+            </p>
+
+            <ul>
+
+                <li>
+                    Business profile for important company information.
+                </li>
+
+                <li>
+                    Greeting messages for new customers.
+                </li>
+
+                <li>
+                    Away messages when a business is unavailable.
+                </li>
+
+                <li>
+                    Quick replies for frequently asked questions.
+                </li>
+
+                <li>
+                    Product and service catalogs.
+                </li>
+
+                <li>
+                    Labels for organizing customer conversations.
+                </li>
+
+            </ul>
+
+
+            <h2>
+                Why Businesses Use It
+            </h2>
+
+            <p>
+                Customers often prefer messaging because it is quick
+                and convenient. WhatsApp Business can make customer
+                communication more organized and easier to manage.
+            </p>
+
+            <div class="tip-box">
+
+                <strong>VIDENEST Tip:</strong><br>
+
+                Keep your business profile clear and professional.
+                Use a recognizable business name, accurate contact
+                information and simple messages so customers know
+                exactly how you can help them.
+
+            </div>
+
+
+            <h2>
+                WhatsApp Business for Small Businesses
+            </h2>
+
+            <p>
+                Small shops, freelancers, service providers and
+                home-based businesses can use WhatsApp Business to
+                answer customer questions, share product information
+                and communicate about orders or services.
+            </p>
+
+            <p>
+                The best results usually come from responding clearly,
+                keeping information updated and avoiding unnecessary
+                promotional messages.
+            </p>
+
+
+            <h2>
+                Final Thoughts
+            </h2>
+
+            <p>
+                WhatsApp Business provides practical communication
+                tools for businesses of different sizes. When used
+                properly, it can help businesses keep customer
+                conversations organized and accessible.
+            </p>
+
+            <a
+                class="back"
+                href="index.html">
+                ← Back to VIDENEST
+            </a>
+
+        </div>
+
+    </article>
+
+</main>
+
+
+<footer id="footer">
+
+    © 2026 VIDENEST — Discover. Learn. Stay Ahead.
+
+</footer>
+
+
+<script>
+
+function toggleMenu() {
+
+    document
+        .getElementById("mainNav")
+        .classList
+        .toggle("active");
+
+}
+
+</script>
+
+</body>
+</html>
