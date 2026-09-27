@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>The Islamic Golden Age | VIDENEST</title>
+
+<meta name="description"
+      content="Explore the Islamic Golden Age, a remarkable period of scientific, mathematical, medical and intellectual achievement.">
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #172033;
+    line-height: 1.7;
+}
+
+header {
+    background: #071525;
+    color: white;
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    padding: 10px 7%;
+    gap: 25px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: auto;
+}
+
+.logo-mark {
+    width: 34px;
+    height: 38px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #2563eb, #22d3ee);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+}
+
+.logo-text {
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: .5px;
+}
+
+.logo-text span {
+    color: #22d3ee;
+}
+
+.tagline {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #aab7c8;
+    margin-top: -3px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+nav a {
+    color: #dce5f1;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+nav a:hover {
+    color: #22d3ee;
+}
+
+.menu-button {
+    display: none;
+    background: none;
+    border: 0;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.container {
+    width: 86%;
+    max-width: 1100px;
+    margin: 35px auto 60px;
+}
+
+.article {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,.07);
+}
+
+.article-image {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+}
+
+.article-content {
+    padding: 35px 7%;
+}
+
+.category-label {
+    display: inline-block;
+    background: #f0ead9;
+    color: #80621c;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.intro {
+    font-size: 17px;
+    color: #5c6677;
+    margin-bottom: 28px;
+}
+
+h2 {
+    font-size: 25px;
+    margin: 30px 0 12px;
+}
+
+p {
+    margin-bottom: 16px;
+    color: #394457;
+}
+
+ul {
+    margin: 10px 0 20px 22px;
+}
+
+li {
+    margin-bottom: 8px;
+    color: #394457;
+}
+
+.info-box {
+    background: #fff8e8;
+    border-left: 4px solid #c79b32;
+    padding: 18px 20px;
+    border-radius: 8px;
+    margin: 25px 0;
+}
+
+.back {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 18px;
+    background: #071525;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+footer {
+    background: #071525;
+    color: #aab7c8;
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 13px;
+}
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 10px 5%;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        background: #071525;
+        flex-direction: column;
+        gap: 0;
+        padding: 8px 0 12px;
+        z-index: 100;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+        padding: 9px;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .container {
+        width: 94%;
+        margin-top: 22px;
+    }
+
+    .article-image {
+        height: 220px;
+    }
+
+    .article-content {
+        padding: 25px 6%;
+    }
+
+    h1 {
+        font-size: 29px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .intro {
+        font-size: 15px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+
+        <div class="logo-mark">
+            V
+        </div>
+
+        <div>
+
+            <div class="logo-text">
+                VIDE<span>NEST</span>
+            </div>
+
+            <div class="tagline">
+                DISCOVER • LEARN • STAY AHEAD
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <nav id="mainNav">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="index.html#blog">
+            Blog
+        </a>
+
+        <a href="tech.html">
+            Tech
+        </a>
+
+        <a href="ai.html">
+            AI
+        </a>
+
+        <a href="lifestyle.html">
+            Lifestyle
+        </a>
+
+        <a href="history.html">
+            History
+        </a>
+
+        <a href="index.html#footer">
+            About
+        </a>
+
+        <a href="index.html#footer">
+            Contact
+        </a>
+
+    </nav>
+
+
+    <button
+        class="menu-button"
+        onclick="toggleMenu()">
+        ☰
+    </button>
+
+</header>
+
+
+<main class="container">
+
+    <article class="article">
+
+        <img
+            class="article-image"
+            src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1400&q=85"
+            alt="Islamic architecture representing the Islamic Golden Age">
+
+
+        <div class="article-content">
+
+            <span class="category-label">
+                HISTORY
+            </span>
+
+
+            <h1>
+                The Islamic Golden Age: A Journey Through Knowledge and Discovery
+            </h1>
+
+
+            <p class="intro">
+                The Islamic Golden Age was a remarkable period in history
+                when scholars across the Muslim world made important
+                contributions to science, mathematics, medicine,
+                astronomy, philosophy and literature.
+            </p>
+
+
+            <h2>
+                What Was the Islamic Golden Age?
+            </h2>
+
+            <p>
+                The term Islamic Golden Age generally refers to a period
+                of intellectual and scientific activity in the Islamic
+                world, particularly from around the 8th to the 13th
+                centuries.
+            </p>
+
+            <p>
+                Major centers of learning developed in cities such as
+                Baghdad, Damascus, Cairo and Cordoba. Scholars studied
+                existing knowledge and also produced new ideas and
+                discoveries.
+            </p>
+
+
+            <h2>
+                The House of Wisdom
+            </h2>
+
+            <p>
+                Baghdad became an important center of scholarship under
+                the Abbasid Caliphate. The Bayt al-Hikma, commonly known
+                as the House of Wisdom, became associated with translation,
+                research and intellectual activity.
+            </p>
+
+            <p>
+                Works from Greek, Persian and Indian traditions were
+                translated into Arabic, helping preserve and spread
+                knowledge across different regions.
+            </p>
+
+
+            <h2>
+                Mathematics and Algebra
+            </h2>
+
+            <p>
+                Muslim mathematicians made major contributions to the
+                development of mathematics. Muhammad ibn Musa
+                al-Khwarizmi is especially associated with the development
+                of algebra.
+            </p>
+
+            <p>
+                His mathematical work helped establish methods that
+                influenced later mathematical development. The word
+                "algorithm" is also connected to the Latinized form of
+                his name.
+            </p>
+
+
+            <h2>
+                Medicine and Hospitals
+            </h2>
+
+            <p>
+                Physicians and scholars developed medical knowledge
+                through observation, study and the organization of
+                existing medical texts.
+            </p>
+
+            <ul>
+
+                <li>
+                    Medical encyclopedias were compiled.
+                </li>
+
+                <li>
+                    Hospitals became important centers for treatment
+                    and medical learning.
+                </li>
+
+                <li>
+                    Physicians studied diseases, medicines and
+                    surgical techniques.
+                </li>
+
+            </ul>
+
+
+            <h2>
+                Astronomy and Scientific Observation
+            </h2>
+
+            <p>
+                Astronomy was another important field of study.
+                Scholars observed the movement of celestial bodies,
+                improved astronomical tables and developed instruments
+                for observation and measurement.
+            </p>
+
+
+            <div class="info-box">
+
+                <strong>VIDENEST History Note:</strong><br>
+
+                The Islamic Golden Age was not the achievement of a
+                single city or person. It involved scholars from
+                different regions, cultures and intellectual traditions
+                who contributed to a broader exchange of knowledge.
+
+            </div>
+
+
+            <h2>
+                Libraries and the Spread of Knowledge
+            </h2>
+
+            <p>
+                Libraries, schools and scholarly institutions helped
+                books and ideas travel between regions. Arabic became
+                an important language of scholarship, allowing knowledge
+                from different traditions to be studied and shared.
+            </p>
+
+
+            <h2>
+                A Lasting Legacy
+            </h2>
+
+            <p>
+                The scientific and intellectual work produced during
+                this period became part of the wider history of global
+                knowledge. Later scholars in Europe and elsewhere
+                encountered many works through translation and
+                intellectual exchange.
+            </p>
+
+
+            <h2>
+                Final Thoughts
+            </h2>
+
+            <p>
+                The Islamic Golden Age offers an important lesson about
+                the value of curiosity, education, research and the
+                exchange of ideas. Its history continues to inspire
+                people interested in science, learning and discovery.
+            </p>
+
+
+            <a
+                class="back"
+                href="index.html">
+                ← Back to VIDENEST
+            </a>
+
+        </div>
+
+    </article>
+
+</main>
+
+
+<footer id="footer">
+
+    © 2026 VIDENEST — Discover. Learn. Stay Ahead.
+
+</footer>
+
+
+<script>
+
+function toggleMenu() {
+
+    document
+        .getElementById("mainNav")
+        .classList
+        .toggle("active");
+
+}
+
+</script>
+
+</body>
+</html>
