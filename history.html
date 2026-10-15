@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>History | VIDENEST</title>
+<title>World History, Ancient Civilizations & Historical Events | VIDENEST</title>
 
-<meta name="description" content="Explore fascinating history, civilizations, important events and lessons from the past on VIDENEST.">
+<meta name="description" content="Explore world history, ancient civilizations, the Islamic Golden Age and important historical events. Discover remarkable people, discoveries and lessons from the past with VIDENEST.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://rzaib134-sudo.github.io/videnest/history.html">
 
 <style>
 * {
@@ -239,7 +244,12 @@ footer {
         </div>
     </div>
 
-    <button class="menu-button" onclick="toggleMenu()">☰</button>
+    <button
+        class="menu-button"
+        onclick="toggleMenu()"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        id="menuButton">☰</button>
 
     <nav id="mainNav">
         <a href="index.html">Home</a>
@@ -268,7 +278,8 @@ footer {
 
         <img
             src="https://images.unsplash.com/photo-1461360228754-6e81c478b882?auto=format&fit=crop&w=1400&q=85"
-            alt="Ancient historical architecture">
+            alt="Ancient historical architecture"
+            fetchpriority="high">
 
         <div class="article-content">
 
@@ -336,12 +347,21 @@ footer {
 
 <script>
 function toggleMenu() {
-    document.getElementById("mainNav").classList.toggle("active");
+    const nav = document.getElementById("mainNav");
+    const button = document.getElementById("menuButton");
+
+    nav.classList.toggle("active");
+
+    button.setAttribute(
+        "aria-expanded",
+        nav.classList.contains("active") ? "true" : "false"
+    );
 }
 
 document.querySelectorAll("#mainNav a").forEach(function(link) {
     link.addEventListener("click", function() {
         document.getElementById("mainNav").classList.remove("active");
+        document.getElementById("menuButton").setAttribute("aria-expanded", "false");
     });
 });
 </script>
